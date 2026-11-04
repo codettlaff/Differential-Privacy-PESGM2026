@@ -8677,7 +8677,7 @@ $</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">precompute_indices</span><span class="p">(</span>
@@ -8729,7 +8729,7 @@ $</p>
 
         <span class="c1"># Shuffle examples within each split.</span>
         <span class="n">perm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">idx_dict</span><span class="p">))</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">inp_idx</span><span class="p">))</span>
-        <span class="n">idx_dict</span><span class="p">[</span><span class="n">split_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">inp_idx</span><span class="p">[</span><span class="n">perm</span><span class="p">]</span>
+        <span class="n">idx_dict</span><span class="p">[</span><span class="n">split_name</span> <span class="o">+</span> <span class="s1">'_indices'</span><span class="p">]</span> <span class="o">=</span> <span class="n">inp_idx</span><span class="p">[</span><span class="n">perm</span><span class="p">]</span>
 
     <span class="n">num_windows</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span> <span class="k">for</span> <span class="n">indices</span> <span class="ow">in</span> <span class="n">idx_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
     <span class="k">return</span> <span class="n">expected_num_windows</span><span class="p">,</span> <span class="n">num_windows</span><span class="p">,</span> <span class="n">idx_dict</span>
@@ -8743,7 +8743,7 @@ $</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">expected_num_windows</span><span class="p">,</span> <span class="n">num_windows</span><span class="p">,</span> <span class="n">idx_dict</span> <span class="o">=</span> <span class="n">precompute_indices</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">window_length</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span> <span class="n">train_val_test_split</span><span class="p">,</span> <span class="n">num_chunks</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
@@ -8777,7 +8777,7 @@ Number of Windows Discarded: 116
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Show the number of windows and unique timestamps covered in each split</span>
@@ -8799,9 +8799,9 @@ Number of Windows Discarded: 116
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Total Available Timestamps: 1000
-Train : 513 windows, 600 unique timestamps
-Val   : 171 windows, 200 unique timestamps
-Test  : 171 windows, 200 unique timestamps
+Train_indices : 513 windows, 600 unique timestamps
+Val_indices : 171 windows, 200 unique timestamps
+Test_indices : 171 windows, 200 unique timestamps
 </pre>
 </div>
 </div>
@@ -8812,11 +8812,11 @@ Test  : 171 windows, 200 unique timestamps
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Recompute the train/validation/test proportions from the assigned windows.</span>
-<span class="n">split_names</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"train"</span><span class="p">,</span> <span class="s2">"val"</span><span class="p">,</span> <span class="s2">"test"</span><span class="p">)</span>
+<span class="n">split_names</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"train_indices"</span><span class="p">,</span> <span class="s2">"val_indices"</span><span class="p">,</span> <span class="s2">"test_indices"</span><span class="p">)</span>
 <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">idx_dict</span><span class="p">[</span><span class="n">name</span><span class="p">])</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">split_names</span><span class="p">)</span>
 
 <span class="n">real_train_val_test_split</span> <span class="o">=</span> <span class="p">[</span>
@@ -8873,7 +8873,7 @@ Real Train/Val/Test Split: [0.6, 0.2, 0.2]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">dataset_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">processed_data_dir</span><span class="p">,</span> <span class="s1">'ampds_dataset.npz'</span><span class="p">)</span>
