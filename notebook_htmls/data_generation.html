@@ -8391,18 +8391,18 @@ Number of Appliances: 20
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_appliance_metrics</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">on_thresholds</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">{</span>
-        <span class="s2">"min"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-        <span class="s2">"max"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-        <span class="s2">"mean"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-        <span class="s2">"median"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-        <span class="s2">"std"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-        <span class="s1">'on_threshold'</span><span class="p">:</span> <span class="n">on_thresholds</span><span class="p">,</span>
-        <span class="s1">'on_percentrage'</span><span class="p">:</span> <span class="n">on_percentages</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">on_thresholds</span><span class="p">)}</span>
+        <span class="s2">"apps_min"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+        <span class="s2">"apps_max"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+        <span class="s2">"apps_mean"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+        <span class="s2">"apps_median"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+        <span class="s2">"apps_std"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+        <span class="s1">'apps_on_threshold'</span><span class="p">:</span> <span class="n">on_thresholds</span><span class="p">,</span>
+        <span class="s1">'apps_on_percentrage'</span><span class="p">:</span> <span class="n">on_percentages</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">on_thresholds</span><span class="p">)}</span>
 </pre></div>
 </div>
 </div>
@@ -8413,7 +8413,7 @@ Number of Appliances: 20
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">appliance_on_thresholds</span> <span class="o">=</span> <span class="n">determine_on_threshold</span><span class="p">(</span><span class="n">apps</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">:])</span> <span class="c1"># Exclude 'id' and 'time' columns.</span>
@@ -8434,122 +8434,103 @@ Number of Appliances: 20
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <style type="text/css">
 </style>
-<table id="T_19d3a">
+<table id="T_23064">
 <caption>Appliance Metrics</caption>
 <thead>
 <tr>
 <th class="blank level0"> </th>
-<th class="col_heading level0 col0" id="T_19d3a_level0_col0">min</th>
-<th class="col_heading level0 col1" id="T_19d3a_level0_col1">max</th>
-<th class="col_heading level0 col2" id="T_19d3a_level0_col2">mean</th>
-<th class="col_heading level0 col3" id="T_19d3a_level0_col3">median</th>
-<th class="col_heading level0 col4" id="T_19d3a_level0_col4">std</th>
-<th class="col_heading level0 col5" id="T_19d3a_level0_col5">on_threshold</th>
-<th class="col_heading level0 col6" id="T_19d3a_level0_col6">on_percentrage</th>
+<th class="col_heading level0 col0" id="T_23064_level0_col0">apps_min</th>
+<th class="col_heading level0 col1" id="T_23064_level0_col1">apps_max</th>
+<th class="col_heading level0 col2" id="T_23064_level0_col2">apps_mean</th>
+<th class="col_heading level0 col3" id="T_23064_level0_col3">apps_median</th>
+<th class="col_heading level0 col4" id="T_23064_level0_col4">apps_std</th>
+<th class="col_heading level0 col5" id="T_23064_level0_col5">apps_on_threshold</th>
+<th class="col_heading level0 col6" id="T_23064_level0_col6">apps_on_percentrage</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th class="row_heading level0 row0" id="T_19d3a_level0_row0">CWE</th>
-<td class="data row0 col0" id="T_19d3a_row0_col0">0.00</td>
-<td class="data row0 col1" id="T_19d3a_row0_col1">1002.00</td>
-<td class="data row0 col2" id="T_19d3a_row0_col2">14.85</td>
-<td class="data row0 col3" id="T_19d3a_row0_col3">0.00</td>
-<td class="data row0 col4" id="T_19d3a_row0_col4">73.87</td>
-<td class="data row0 col5" id="T_19d3a_row0_col5">111.00</td>
-<td class="data row0 col6" id="T_19d3a_row0_col6">5.30</td>
+<th class="row_heading level0 row0" id="T_23064_level0_row0">CWE</th>
+<td class="data row0 col0" id="T_23064_row0_col0">0.00</td>
+<td class="data row0 col1" id="T_23064_row0_col1">1002.00</td>
+<td class="data row0 col2" id="T_23064_row0_col2">14.85</td>
+<td class="data row0 col3" id="T_23064_row0_col3">0.00</td>
+<td class="data row0 col4" id="T_23064_row0_col4">73.87</td>
+<td class="data row0 col5" id="T_23064_row0_col5">111.00</td>
+<td class="data row0 col6" id="T_23064_row0_col6">5.30</td>
 </tr>
 <tr>
-<th class="row_heading level0 row1" id="T_19d3a_level0_row1">DWE</th>
-<td class="data row1 col0" id="T_19d3a_row1_col0">0.00</td>
-<td class="data row1 col1" id="T_19d3a_row1_col1">0.00</td>
-<td class="data row1 col2" id="T_19d3a_row1_col2">0.00</td>
-<td class="data row1 col3" id="T_19d3a_row1_col3">0.00</td>
-<td class="data row1 col4" id="T_19d3a_row1_col4">0.00</td>
-<td class="data row1 col5" id="T_19d3a_row1_col5">0.00</td>
-<td class="data row1 col6" id="T_19d3a_row1_col6">0.00</td>
+<th class="row_heading level0 row1" id="T_23064_level0_row1">DWE</th>
+<td class="data row1 col0" id="T_23064_row1_col0">0.00</td>
+<td class="data row1 col1" id="T_23064_row1_col1">0.00</td>
+<td class="data row1 col2" id="T_23064_row1_col2">0.00</td>
+<td class="data row1 col3" id="T_23064_row1_col3">0.00</td>
+<td class="data row1 col4" id="T_23064_row1_col4">0.00</td>
+<td class="data row1 col5" id="T_23064_row1_col5">0.00</td>
+<td class="data row1 col6" id="T_23064_row1_col6">0.00</td>
 </tr>
 <tr>
-<th class="row_heading level0 row2" id="T_19d3a_level0_row2">FRE</th>
-<td class="data row2 col0" id="T_19d3a_row2_col0">102.00</td>
-<td class="data row2 col1" id="T_19d3a_row2_col1">116.00</td>
-<td class="data row2 col2" id="T_19d3a_row2_col2">107.33</td>
-<td class="data row2 col3" id="T_19d3a_row2_col3">105.00</td>
-<td class="data row2 col4" id="T_19d3a_row2_col4">4.59</td>
-<td class="data row2 col5" id="T_19d3a_row2_col5">109.00</td>
-<td class="data row2 col6" id="T_19d3a_row2_col6">32.70</td>
+<th class="row_heading level0 row2" id="T_23064_level0_row2">FRE</th>
+<td class="data row2 col0" id="T_23064_row2_col0">102.00</td>
+<td class="data row2 col1" id="T_23064_row2_col1">116.00</td>
+<td class="data row2 col2" id="T_23064_row2_col2">107.33</td>
+<td class="data row2 col3" id="T_23064_row2_col3">105.00</td>
+<td class="data row2 col4" id="T_23064_row2_col4">4.59</td>
+<td class="data row2 col5" id="T_23064_row2_col5">109.00</td>
+<td class="data row2 col6" id="T_23064_row2_col6">32.70</td>
 </tr>
 <tr>
-<th class="row_heading level0 row3" id="T_19d3a_level0_row3">HPE</th>
-<td class="data row3 col0" id="T_19d3a_row3_col0">0.00</td>
-<td class="data row3 col1" id="T_19d3a_row3_col1">2813.00</td>
-<td class="data row3 col2" id="T_19d3a_row3_col2">597.87</td>
-<td class="data row3 col3" id="T_19d3a_row3_col3">37.00</td>
-<td class="data row3 col4" id="T_19d3a_row3_col4">821.90</td>
-<td class="data row3 col5" id="T_19d3a_row3_col5">545.00</td>
-<td class="data row3 col6" id="T_19d3a_row3_col6">32.70</td>
+<th class="row_heading level0 row3" id="T_23064_level0_row3">HPE</th>
+<td class="data row3 col0" id="T_23064_row3_col0">0.00</td>
+<td class="data row3 col1" id="T_23064_row3_col1">2813.00</td>
+<td class="data row3 col2" id="T_23064_row3_col2">597.87</td>
+<td class="data row3 col3" id="T_23064_row3_col3">37.00</td>
+<td class="data row3 col4" id="T_23064_row3_col4">821.90</td>
+<td class="data row3 col5" id="T_23064_row3_col5">545.00</td>
+<td class="data row3 col6" id="T_23064_row3_col6">32.70</td>
 </tr>
 <tr>
-<th class="row_heading level0 row4" id="T_19d3a_level0_row4">WOE</th>
-<td class="data row4 col0" id="T_19d3a_row4_col0">0.00</td>
-<td class="data row4 col1" id="T_19d3a_row4_col1">1.00</td>
-<td class="data row4 col2" id="T_19d3a_row4_col2">0.03</td>
-<td class="data row4 col3" id="T_19d3a_row4_col3">0.00</td>
-<td class="data row4 col4" id="T_19d3a_row4_col4">0.16</td>
-<td class="data row4 col5" id="T_19d3a_row4_col5">0.50</td>
-<td class="data row4 col6" id="T_19d3a_row4_col6">2.80</td>
+<th class="row_heading level0 row4" id="T_23064_level0_row4">WOE</th>
+<td class="data row4 col0" id="T_23064_row4_col0">0.00</td>
+<td class="data row4 col1" id="T_23064_row4_col1">1.00</td>
+<td class="data row4 col2" id="T_23064_row4_col2">0.03</td>
+<td class="data row4 col3" id="T_23064_row4_col3">0.00</td>
+<td class="data row4 col4" id="T_23064_row4_col4">0.16</td>
+<td class="data row4 col5" id="T_23064_row4_col5">0.50</td>
+<td class="data row4 col6" id="T_23064_row4_col6">2.80</td>
 </tr>
 <tr>
-<th class="row_heading level0 row5" id="T_19d3a_level0_row5">CDE</th>
-<td class="data row5 col0" id="T_19d3a_row5_col0">0.00</td>
-<td class="data row5 col1" id="T_19d3a_row5_col1">0.00</td>
-<td class="data row5 col2" id="T_19d3a_row5_col2">0.00</td>
-<td class="data row5 col3" id="T_19d3a_row5_col3">0.00</td>
-<td class="data row5 col4" id="T_19d3a_row5_col4">0.00</td>
-<td class="data row5 col5" id="T_19d3a_row5_col5">0.00</td>
-<td class="data row5 col6" id="T_19d3a_row5_col6">0.00</td>
+<th class="row_heading level0 row5" id="T_23064_level0_row5">CDE</th>
+<td class="data row5 col0" id="T_23064_row5_col0">0.00</td>
+<td class="data row5 col1" id="T_23064_row5_col1">0.00</td>
+<td class="data row5 col2" id="T_23064_row5_col2">0.00</td>
+<td class="data row5 col3" id="T_23064_row5_col3">0.00</td>
+<td class="data row5 col4" id="T_23064_row5_col4">0.00</td>
+<td class="data row5 col5" id="T_23064_row5_col5">0.00</td>
+<td class="data row5 col6" id="T_23064_row5_col6">0.00</td>
 </tr>
 <tr>
-<th class="row_heading level0 row6" id="T_19d3a_level0_row6">FGE</th>
-<td class="data row6 col0" id="T_19d3a_row6_col0">0.00</td>
-<td class="data row6 col1" id="T_19d3a_row6_col1">154.00</td>
-<td class="data row6 col2" id="T_19d3a_row6_col2">42.08</td>
-<td class="data row6 col3" id="T_19d3a_row6_col3">0.00</td>
-<td class="data row6 col4" id="T_19d3a_row6_col4">60.22</td>
-<td class="data row6 col5" id="T_19d3a_row6_col5">45.00</td>
-<td class="data row6 col6" id="T_19d3a_row6_col6">31.70</td>
+<th class="row_heading level0 row6" id="T_23064_level0_row6">FGE</th>
+<td class="data row6 col0" id="T_23064_row6_col0">0.00</td>
+<td class="data row6 col1" id="T_23064_row6_col1">154.00</td>
+<td class="data row6 col2" id="T_23064_row6_col2">42.08</td>
+<td class="data row6 col3" id="T_23064_row6_col3">0.00</td>
+<td class="data row6 col4" id="T_23064_row6_col4">60.22</td>
+<td class="data row6 col5" id="T_23064_row6_col5">45.00</td>
+<td class="data row6 col6" id="T_23064_row6_col6">31.70</td>
 </tr>
 <tr>
-<th class="row_heading level0 row7" id="T_19d3a_level0_row7">HTE</th>
-<td class="data row7 col0" id="T_19d3a_row7_col0">3.00</td>
-<td class="data row7 col1" id="T_19d3a_row7_col1">54.00</td>
-<td class="data row7 col2" id="T_19d3a_row7_col2">6.29</td>
-<td class="data row7 col3" id="T_19d3a_row7_col3">5.00</td>
-<td class="data row7 col4" id="T_19d3a_row7_col4">5.86</td>
-<td class="data row7 col5" id="T_19d3a_row7_col5">12.00</td>
-<td class="data row7 col6" id="T_19d3a_row7_col6">7.40</td>
+<th class="row_heading level0 row7" id="T_23064_level0_row7">HTE</th>
+<td class="data row7 col0" id="T_23064_row7_col0">3.00</td>
+<td class="data row7 col1" id="T_23064_row7_col1">54.00</td>
+<td class="data row7 col2" id="T_23064_row7_col2">6.29</td>
+<td class="data row7 col3" id="T_23064_row7_col3">5.00</td>
+<td class="data row7 col4" id="T_23064_row7_col4">5.86</td>
+<td class="data row7 col5" id="T_23064_row7_col5">12.00</td>
+<td class="data row7 col6" id="T_23064_row7_col6">7.40</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8c2e3fc9">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># choose an appliance with a clear on/off pattern and a meaningful threshold</span>
-<span class="n">example_appliance</span> <span class="o">=</span> <span class="s1">'HPE'</span>
-<span class="n">appliance_idx</span> <span class="o">=</span> <span class="n">appliance_names</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">example_appliance</span><span class="p">)</span>
-<span class="n">series</span> <span class="o">=</span> <span class="n">apps</span><span class="p">[:,</span> <span class="n">appliance_idx</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>
-<span class="n">time_vals</span> <span class="o">=</span> <span class="n">apps</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
-<span class="n">threshold</span> <span class="o">=</span> <span class="n">appliance_on_thresholds</span><span class="p">[</span><span class="n">appliance_idx</span><span class="p">]</span>
-</pre></div>
 </div>
 </div>
 </div>
@@ -8559,7 +8540,7 @@ Number of Appliances: 20
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># choose an appliance with a clear on/off pattern and a meaningful threshold</span>
@@ -8619,7 +8600,7 @@ $</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">normalize_data</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -8636,7 +8617,7 @@ $</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">agg_norm</span> <span class="o">=</span> <span class="n">normalize_data</span><span class="p">(</span><span class="n">agg</span><span class="p">)</span>
@@ -8696,7 +8677,7 @@ $</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">precompute_indices</span><span class="p">(</span>
@@ -8762,7 +8743,7 @@ $</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">expected_num_windows</span><span class="p">,</span> <span class="n">num_windows</span><span class="p">,</span> <span class="n">idx_dict</span> <span class="o">=</span> <span class="n">precompute_indices</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">window_length</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span> <span class="n">train_val_test_split</span><span class="p">,</span> <span class="n">num_chunks</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
@@ -8796,7 +8777,7 @@ Number of Windows Discarded: 116
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Show the number of windows and unique timestamps covered in each split</span>
@@ -8831,7 +8812,7 @@ Test  : 171 windows, 200 unique timestamps
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Recompute the train/validation/test proportions from the assigned windows.</span>
@@ -8892,7 +8873,7 @@ Real Train/Val/Test Split: [0.6, 0.2, 0.2]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">dataset_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">processed_data_dir</span><span class="p">,</span> <span class="s1">'ampds_dataset.npz'</span><span class="p">)</span>
