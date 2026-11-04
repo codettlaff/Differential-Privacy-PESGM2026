@@ -7811,13 +7811,14 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">scipy.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">loadmat</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 </pre></div>
 </div>
 </div>
@@ -7839,7 +7840,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">base_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
@@ -7868,7 +7869,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">T_limit</span> <span class="o">=</span> <span class="mi">1000</span>
@@ -7896,7 +7897,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">ampds_folderpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s1">'ampds'</span><span class="p">)</span>
@@ -7957,7 +7958,7 @@ Number of Appliances: 20
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="n">agg</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -7996,64 +7997,64 @@ Number of Appliances: 20
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <style type="text/css">
 </style>
-<table id="T_85e34">
+<table id="T_1d03c">
 <caption>Aggregate Measurements</caption>
 <thead>
 <tr>
 <th class="blank level0"> </th>
-<th class="col_heading level0 col0" id="T_85e34_level0_col0">time </th>
-<th class="col_heading level0 col1" id="T_85e34_level0_col1">id   </th>
-<th class="col_heading level0 col2" id="T_85e34_level0_col2">P-agg</th>
-<th class="col_heading level0 col3" id="T_85e34_level0_col3">I-agg</th>
-<th class="col_heading level0 col4" id="T_85e34_level0_col4">Q-agg</th>
-<th class="col_heading level0 col5" id="T_85e34_level0_col5">S-agg</th>
+<th class="col_heading level0 col0" id="T_1d03c_level0_col0">time </th>
+<th class="col_heading level0 col1" id="T_1d03c_level0_col1">id   </th>
+<th class="col_heading level0 col2" id="T_1d03c_level0_col2">P-agg</th>
+<th class="col_heading level0 col3" id="T_1d03c_level0_col3">I-agg</th>
+<th class="col_heading level0 col4" id="T_1d03c_level0_col4">Q-agg</th>
+<th class="col_heading level0 col5" id="T_1d03c_level0_col5">S-agg</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th class="row_heading level0 row0" id="T_85e34_level0_row0">0</th>
-<td class="data row0 col0" id="T_85e34_row0_col0">60.00</td>
-<td class="data row0 col1" id="T_85e34_row0_col1">1.00</td>
-<td class="data row0 col2" id="T_85e34_row0_col2">918.00</td>
-<td class="data row0 col3" id="T_85e34_row0_col3">8.30</td>
-<td class="data row0 col4" id="T_85e34_row0_col4">141.00</td>
-<td class="data row0 col5" id="T_85e34_row0_col5">1037.00</td>
+<th class="row_heading level0 row0" id="T_1d03c_level0_row0">0</th>
+<td class="data row0 col0" id="T_1d03c_row0_col0">60.00</td>
+<td class="data row0 col1" id="T_1d03c_row0_col1">1.00</td>
+<td class="data row0 col2" id="T_1d03c_row0_col2">918.00</td>
+<td class="data row0 col3" id="T_1d03c_row0_col3">8.30</td>
+<td class="data row0 col4" id="T_1d03c_row0_col4">141.00</td>
+<td class="data row0 col5" id="T_1d03c_row0_col5">1037.00</td>
 </tr>
 <tr>
-<th class="row_heading level0 row1" id="T_85e34_level0_row1">1</th>
-<td class="data row1 col0" id="T_85e34_row1_col0">120.00</td>
-<td class="data row1 col1" id="T_85e34_row1_col1">1.00</td>
-<td class="data row1 col2" id="T_85e34_row1_col2">913.00</td>
-<td class="data row1 col3" id="T_85e34_row1_col3">8.20</td>
-<td class="data row1 col4" id="T_85e34_row1_col4">141.00</td>
-<td class="data row1 col5" id="T_85e34_row1_col5">1028.00</td>
+<th class="row_heading level0 row1" id="T_1d03c_level0_row1">1</th>
+<td class="data row1 col0" id="T_1d03c_row1_col0">120.00</td>
+<td class="data row1 col1" id="T_1d03c_row1_col1">1.00</td>
+<td class="data row1 col2" id="T_1d03c_row1_col2">913.00</td>
+<td class="data row1 col3" id="T_1d03c_row1_col3">8.20</td>
+<td class="data row1 col4" id="T_1d03c_row1_col4">141.00</td>
+<td class="data row1 col5" id="T_1d03c_row1_col5">1028.00</td>
 </tr>
 <tr>
-<th class="row_heading level0 row2" id="T_85e34_level0_row2">2</th>
-<td class="data row2 col0" id="T_85e34_row2_col0">180.00</td>
-<td class="data row2 col1" id="T_85e34_row2_col1">1.00</td>
-<td class="data row2 col2" id="T_85e34_row2_col2">872.00</td>
-<td class="data row2 col3" id="T_85e34_row2_col3">8.00</td>
-<td class="data row2 col4" id="T_85e34_row2_col4">139.00</td>
-<td class="data row2 col5" id="T_85e34_row2_col5">993.00</td>
+<th class="row_heading level0 row2" id="T_1d03c_level0_row2">2</th>
+<td class="data row2 col0" id="T_1d03c_row2_col0">180.00</td>
+<td class="data row2 col1" id="T_1d03c_row2_col1">1.00</td>
+<td class="data row2 col2" id="T_1d03c_row2_col2">872.00</td>
+<td class="data row2 col3" id="T_1d03c_row2_col3">8.00</td>
+<td class="data row2 col4" id="T_1d03c_row2_col4">139.00</td>
+<td class="data row2 col5" id="T_1d03c_row2_col5">993.00</td>
 </tr>
 <tr>
-<th class="row_heading level0 row3" id="T_85e34_level0_row3">3</th>
-<td class="data row3 col0" id="T_85e34_row3_col0">240.00</td>
-<td class="data row3 col1" id="T_85e34_row3_col1">1.00</td>
-<td class="data row3 col2" id="T_85e34_row3_col2">872.00</td>
-<td class="data row3 col3" id="T_85e34_row3_col3">8.00</td>
-<td class="data row3 col4" id="T_85e34_row3_col4">141.00</td>
-<td class="data row3 col5" id="T_85e34_row3_col5">990.00</td>
+<th class="row_heading level0 row3" id="T_1d03c_level0_row3">3</th>
+<td class="data row3 col0" id="T_1d03c_row3_col0">240.00</td>
+<td class="data row3 col1" id="T_1d03c_row3_col1">1.00</td>
+<td class="data row3 col2" id="T_1d03c_row3_col2">872.00</td>
+<td class="data row3 col3" id="T_1d03c_row3_col3">8.00</td>
+<td class="data row3 col4" id="T_1d03c_row3_col4">141.00</td>
+<td class="data row3 col5" id="T_1d03c_row3_col5">990.00</td>
 </tr>
 <tr>
-<th class="row_heading level0 row4" id="T_85e34_level0_row4">4</th>
-<td class="data row4 col0" id="T_85e34_row4_col0">300.00</td>
-<td class="data row4 col1" id="T_85e34_row4_col1">1.00</td>
-<td class="data row4 col2" id="T_85e34_row4_col2">772.00</td>
-<td class="data row4 col3" id="T_85e34_row4_col3">7.80</td>
-<td class="data row4 col4" id="T_85e34_row4_col4">140.00</td>
-<td class="data row4 col5" id="T_85e34_row4_col5">988.00</td>
+<th class="row_heading level0 row4" id="T_1d03c_level0_row4">4</th>
+<td class="data row4 col0" id="T_1d03c_row4_col0">300.00</td>
+<td class="data row4 col1" id="T_1d03c_row4_col1">1.00</td>
+<td class="data row4 col2" id="T_1d03c_row4_col2">772.00</td>
+<td class="data row4 col3" id="T_1d03c_row4_col3">7.80</td>
+<td class="data row4 col4" id="T_1d03c_row4_col4">140.00</td>
+<td class="data row4 col5" id="T_1d03c_row4_col5">988.00</td>
 </tr>
 </tbody>
 </table>
@@ -8064,163 +8065,232 @@ Number of Appliances: 20
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <style type="text/css">
 </style>
-<table id="T_453c2">
+<table id="T_4eb54">
 <caption>Appliance-Level Measurements</caption>
 <thead>
 <tr>
 <th class="blank level0"> </th>
-<th class="col_heading level0 col0" id="T_453c2_level0_col0">time</th>
-<th class="col_heading level0 col1" id="T_453c2_level0_col1">id  </th>
-<th class="col_heading level0 col2" id="T_453c2_level0_col2">RSE </th>
-<th class="col_heading level0 col3" id="T_453c2_level0_col3">GRE </th>
-<th class="col_heading level0 col4" id="T_453c2_level0_col4">B1E </th>
-<th class="col_heading level0 col5" id="T_453c2_level0_col5">BME </th>
-<th class="col_heading level0 col6" id="T_453c2_level0_col6">CWE </th>
-<th class="col_heading level0 col7" id="T_453c2_level0_col7">DWE </th>
-<th class="col_heading level0 col8" id="T_453c2_level0_col8">EQE </th>
-<th class="col_heading level0 col9" id="T_453c2_level0_col9">FRE </th>
-<th class="col_heading level0 col10" id="T_453c2_level0_col10">HPE </th>
-<th class="col_heading level0 col11" id="T_453c2_level0_col11">OFE </th>
-<th class="col_heading level0 col12" id="T_453c2_level0_col12">UTE </th>
-<th class="col_heading level0 col13" id="T_453c2_level0_col13">WOE </th>
-<th class="col_heading level0 col14" id="T_453c2_level0_col14">B2E </th>
-<th class="col_heading level0 col15" id="T_453c2_level0_col15">CDE </th>
-<th class="col_heading level0 col16" id="T_453c2_level0_col16">DNE </th>
-<th class="col_heading level0 col17" id="T_453c2_level0_col17">EBE </th>
-<th class="col_heading level0 col18" id="T_453c2_level0_col18">FGE </th>
-<th class="col_heading level0 col19" id="T_453c2_level0_col19">HTE </th>
-<th class="col_heading level0 col20" id="T_453c2_level0_col20">OUE </th>
-<th class="col_heading level0 col21" id="T_453c2_level0_col21">TVE </th>
+<th class="col_heading level0 col0" id="T_4eb54_level0_col0">time</th>
+<th class="col_heading level0 col1" id="T_4eb54_level0_col1">id  </th>
+<th class="col_heading level0 col2" id="T_4eb54_level0_col2">RSE </th>
+<th class="col_heading level0 col3" id="T_4eb54_level0_col3">GRE </th>
+<th class="col_heading level0 col4" id="T_4eb54_level0_col4">B1E </th>
+<th class="col_heading level0 col5" id="T_4eb54_level0_col5">BME </th>
+<th class="col_heading level0 col6" id="T_4eb54_level0_col6">CWE </th>
+<th class="col_heading level0 col7" id="T_4eb54_level0_col7">DWE </th>
+<th class="col_heading level0 col8" id="T_4eb54_level0_col8">EQE </th>
+<th class="col_heading level0 col9" id="T_4eb54_level0_col9">FRE </th>
+<th class="col_heading level0 col10" id="T_4eb54_level0_col10">HPE </th>
+<th class="col_heading level0 col11" id="T_4eb54_level0_col11">OFE </th>
+<th class="col_heading level0 col12" id="T_4eb54_level0_col12">UTE </th>
+<th class="col_heading level0 col13" id="T_4eb54_level0_col13">WOE </th>
+<th class="col_heading level0 col14" id="T_4eb54_level0_col14">B2E </th>
+<th class="col_heading level0 col15" id="T_4eb54_level0_col15">CDE </th>
+<th class="col_heading level0 col16" id="T_4eb54_level0_col16">DNE </th>
+<th class="col_heading level0 col17" id="T_4eb54_level0_col17">EBE </th>
+<th class="col_heading level0 col18" id="T_4eb54_level0_col18">FGE </th>
+<th class="col_heading level0 col19" id="T_4eb54_level0_col19">HTE </th>
+<th class="col_heading level0 col20" id="T_4eb54_level0_col20">OUE </th>
+<th class="col_heading level0 col21" id="T_4eb54_level0_col21">TVE </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th class="row_heading level0 row0" id="T_453c2_level0_row0">0</th>
-<td class="data row0 col0" id="T_453c2_row0_col0">60.00</td>
-<td class="data row0 col1" id="T_453c2_row0_col1">1.00</td>
-<td class="data row0 col2" id="T_453c2_row0_col2">43.00</td>
-<td class="data row0 col3" id="T_453c2_row0_col3">2.00</td>
-<td class="data row0 col4" id="T_453c2_row0_col4">0.00</td>
-<td class="data row0 col5" id="T_453c2_row0_col5">352.00</td>
-<td class="data row0 col6" id="T_453c2_row0_col6">0.00</td>
-<td class="data row0 col7" id="T_453c2_row0_col7">0.00</td>
-<td class="data row0 col8" id="T_453c2_row0_col8">41.00</td>
-<td class="data row0 col9" id="T_453c2_row0_col9">106.00</td>
-<td class="data row0 col10" id="T_453c2_row0_col10">36.00</td>
-<td class="data row0 col11" id="T_453c2_row0_col11">62.00</td>
-<td class="data row0 col12" id="T_453c2_row0_col12">9.00</td>
-<td class="data row0 col13" id="T_453c2_row0_col13">0.00</td>
-<td class="data row0 col14" id="T_453c2_row0_col14">58.00</td>
-<td class="data row0 col15" id="T_453c2_row0_col15">0.00</td>
-<td class="data row0 col16" id="T_453c2_row0_col16">30.00</td>
-<td class="data row0 col17" id="T_453c2_row0_col17">0.00</td>
-<td class="data row0 col18" id="T_453c2_row0_col18">0.00</td>
-<td class="data row0 col19" id="T_453c2_row0_col19">4.00</td>
-<td class="data row0 col20" id="T_453c2_row0_col20">0.00</td>
-<td class="data row0 col21" id="T_453c2_row0_col21">37.00</td>
+<th class="row_heading level0 row0" id="T_4eb54_level0_row0">0</th>
+<td class="data row0 col0" id="T_4eb54_row0_col0">60.00</td>
+<td class="data row0 col1" id="T_4eb54_row0_col1">1.00</td>
+<td class="data row0 col2" id="T_4eb54_row0_col2">43.00</td>
+<td class="data row0 col3" id="T_4eb54_row0_col3">2.00</td>
+<td class="data row0 col4" id="T_4eb54_row0_col4">0.00</td>
+<td class="data row0 col5" id="T_4eb54_row0_col5">352.00</td>
+<td class="data row0 col6" id="T_4eb54_row0_col6">0.00</td>
+<td class="data row0 col7" id="T_4eb54_row0_col7">0.00</td>
+<td class="data row0 col8" id="T_4eb54_row0_col8">41.00</td>
+<td class="data row0 col9" id="T_4eb54_row0_col9">106.00</td>
+<td class="data row0 col10" id="T_4eb54_row0_col10">36.00</td>
+<td class="data row0 col11" id="T_4eb54_row0_col11">62.00</td>
+<td class="data row0 col12" id="T_4eb54_row0_col12">9.00</td>
+<td class="data row0 col13" id="T_4eb54_row0_col13">0.00</td>
+<td class="data row0 col14" id="T_4eb54_row0_col14">58.00</td>
+<td class="data row0 col15" id="T_4eb54_row0_col15">0.00</td>
+<td class="data row0 col16" id="T_4eb54_row0_col16">30.00</td>
+<td class="data row0 col17" id="T_4eb54_row0_col17">0.00</td>
+<td class="data row0 col18" id="T_4eb54_row0_col18">0.00</td>
+<td class="data row0 col19" id="T_4eb54_row0_col19">4.00</td>
+<td class="data row0 col20" id="T_4eb54_row0_col20">0.00</td>
+<td class="data row0 col21" id="T_4eb54_row0_col21">37.00</td>
 </tr>
 <tr>
-<th class="row_heading level0 row1" id="T_453c2_level0_row1">1</th>
-<td class="data row1 col0" id="T_453c2_row1_col0">120.00</td>
-<td class="data row1 col1" id="T_453c2_row1_col1">1.00</td>
-<td class="data row1 col2" id="T_453c2_row1_col2">43.00</td>
-<td class="data row1 col3" id="T_453c2_row1_col3">0.00</td>
-<td class="data row1 col4" id="T_453c2_row1_col4">0.00</td>
-<td class="data row1 col5" id="T_453c2_row1_col5">354.00</td>
-<td class="data row1 col6" id="T_453c2_row1_col6">0.00</td>
-<td class="data row1 col7" id="T_453c2_row1_col7">0.00</td>
-<td class="data row1 col8" id="T_453c2_row1_col8">35.00</td>
-<td class="data row1 col9" id="T_453c2_row1_col9">107.00</td>
-<td class="data row1 col10" id="T_453c2_row1_col10">37.00</td>
-<td class="data row1 col11" id="T_453c2_row1_col11">61.00</td>
-<td class="data row1 col12" id="T_453c2_row1_col12">9.00</td>
-<td class="data row1 col13" id="T_453c2_row1_col13">0.00</td>
-<td class="data row1 col14" id="T_453c2_row1_col14">58.00</td>
-<td class="data row1 col15" id="T_453c2_row1_col15">0.00</td>
-<td class="data row1 col16" id="T_453c2_row1_col16">30.00</td>
-<td class="data row1 col17" id="T_453c2_row1_col17">0.00</td>
-<td class="data row1 col18" id="T_453c2_row1_col18">0.00</td>
-<td class="data row1 col19" id="T_453c2_row1_col19">4.00</td>
-<td class="data row1 col20" id="T_453c2_row1_col20">0.00</td>
-<td class="data row1 col21" id="T_453c2_row1_col21">37.00</td>
+<th class="row_heading level0 row1" id="T_4eb54_level0_row1">1</th>
+<td class="data row1 col0" id="T_4eb54_row1_col0">120.00</td>
+<td class="data row1 col1" id="T_4eb54_row1_col1">1.00</td>
+<td class="data row1 col2" id="T_4eb54_row1_col2">43.00</td>
+<td class="data row1 col3" id="T_4eb54_row1_col3">0.00</td>
+<td class="data row1 col4" id="T_4eb54_row1_col4">0.00</td>
+<td class="data row1 col5" id="T_4eb54_row1_col5">354.00</td>
+<td class="data row1 col6" id="T_4eb54_row1_col6">0.00</td>
+<td class="data row1 col7" id="T_4eb54_row1_col7">0.00</td>
+<td class="data row1 col8" id="T_4eb54_row1_col8">35.00</td>
+<td class="data row1 col9" id="T_4eb54_row1_col9">107.00</td>
+<td class="data row1 col10" id="T_4eb54_row1_col10">37.00</td>
+<td class="data row1 col11" id="T_4eb54_row1_col11">61.00</td>
+<td class="data row1 col12" id="T_4eb54_row1_col12">9.00</td>
+<td class="data row1 col13" id="T_4eb54_row1_col13">0.00</td>
+<td class="data row1 col14" id="T_4eb54_row1_col14">58.00</td>
+<td class="data row1 col15" id="T_4eb54_row1_col15">0.00</td>
+<td class="data row1 col16" id="T_4eb54_row1_col16">30.00</td>
+<td class="data row1 col17" id="T_4eb54_row1_col17">0.00</td>
+<td class="data row1 col18" id="T_4eb54_row1_col18">0.00</td>
+<td class="data row1 col19" id="T_4eb54_row1_col19">4.00</td>
+<td class="data row1 col20" id="T_4eb54_row1_col20">0.00</td>
+<td class="data row1 col21" id="T_4eb54_row1_col21">37.00</td>
 </tr>
 <tr>
-<th class="row_heading level0 row2" id="T_453c2_level0_row2">2</th>
-<td class="data row2 col0" id="T_453c2_row2_col0">180.00</td>
-<td class="data row2 col1" id="T_453c2_row2_col1">1.00</td>
-<td class="data row2 col2" id="T_453c2_row2_col2">43.00</td>
-<td class="data row2 col3" id="T_453c2_row2_col3">2.00</td>
-<td class="data row2 col4" id="T_453c2_row2_col4">0.00</td>
-<td class="data row2 col5" id="T_453c2_row2_col5">354.00</td>
-<td class="data row2 col6" id="T_453c2_row2_col6">0.00</td>
-<td class="data row2 col7" id="T_453c2_row2_col7">0.00</td>
-<td class="data row2 col8" id="T_453c2_row2_col8">41.00</td>
-<td class="data row2 col9" id="T_453c2_row2_col9">107.00</td>
-<td class="data row2 col10" id="T_453c2_row2_col10">38.00</td>
-<td class="data row2 col11" id="T_453c2_row2_col11">61.00</td>
-<td class="data row2 col12" id="T_453c2_row2_col12">9.00</td>
-<td class="data row2 col13" id="T_453c2_row2_col13">0.00</td>
-<td class="data row2 col14" id="T_453c2_row2_col14">8.00</td>
-<td class="data row2 col15" id="T_453c2_row2_col15">0.00</td>
-<td class="data row2 col16" id="T_453c2_row2_col16">30.00</td>
-<td class="data row2 col17" id="T_453c2_row2_col17">0.00</td>
-<td class="data row2 col18" id="T_453c2_row2_col18">0.00</td>
-<td class="data row2 col19" id="T_453c2_row2_col19">4.00</td>
-<td class="data row2 col20" id="T_453c2_row2_col20">0.00</td>
-<td class="data row2 col21" id="T_453c2_row2_col21">37.00</td>
+<th class="row_heading level0 row2" id="T_4eb54_level0_row2">2</th>
+<td class="data row2 col0" id="T_4eb54_row2_col0">180.00</td>
+<td class="data row2 col1" id="T_4eb54_row2_col1">1.00</td>
+<td class="data row2 col2" id="T_4eb54_row2_col2">43.00</td>
+<td class="data row2 col3" id="T_4eb54_row2_col3">2.00</td>
+<td class="data row2 col4" id="T_4eb54_row2_col4">0.00</td>
+<td class="data row2 col5" id="T_4eb54_row2_col5">354.00</td>
+<td class="data row2 col6" id="T_4eb54_row2_col6">0.00</td>
+<td class="data row2 col7" id="T_4eb54_row2_col7">0.00</td>
+<td class="data row2 col8" id="T_4eb54_row2_col8">41.00</td>
+<td class="data row2 col9" id="T_4eb54_row2_col9">107.00</td>
+<td class="data row2 col10" id="T_4eb54_row2_col10">38.00</td>
+<td class="data row2 col11" id="T_4eb54_row2_col11">61.00</td>
+<td class="data row2 col12" id="T_4eb54_row2_col12">9.00</td>
+<td class="data row2 col13" id="T_4eb54_row2_col13">0.00</td>
+<td class="data row2 col14" id="T_4eb54_row2_col14">8.00</td>
+<td class="data row2 col15" id="T_4eb54_row2_col15">0.00</td>
+<td class="data row2 col16" id="T_4eb54_row2_col16">30.00</td>
+<td class="data row2 col17" id="T_4eb54_row2_col17">0.00</td>
+<td class="data row2 col18" id="T_4eb54_row2_col18">0.00</td>
+<td class="data row2 col19" id="T_4eb54_row2_col19">4.00</td>
+<td class="data row2 col20" id="T_4eb54_row2_col20">0.00</td>
+<td class="data row2 col21" id="T_4eb54_row2_col21">37.00</td>
 </tr>
 <tr>
-<th class="row_heading level0 row3" id="T_453c2_level0_row3">3</th>
-<td class="data row3 col0" id="T_453c2_row3_col0">240.00</td>
-<td class="data row3 col1" id="T_453c2_row3_col1">1.00</td>
-<td class="data row3 col2" id="T_453c2_row3_col2">43.00</td>
-<td class="data row3 col3" id="T_453c2_row3_col3">2.00</td>
-<td class="data row3 col4" id="T_453c2_row3_col4">0.00</td>
-<td class="data row3 col5" id="T_453c2_row3_col5">354.00</td>
-<td class="data row3 col6" id="T_453c2_row3_col6">0.00</td>
-<td class="data row3 col7" id="T_453c2_row3_col7">0.00</td>
-<td class="data row3 col8" id="T_453c2_row3_col8">40.00</td>
-<td class="data row3 col9" id="T_453c2_row3_col9">106.00</td>
-<td class="data row3 col10" id="T_453c2_row3_col10">37.00</td>
-<td class="data row3 col11" id="T_453c2_row3_col11">61.00</td>
-<td class="data row3 col12" id="T_453c2_row3_col12">9.00</td>
-<td class="data row3 col13" id="T_453c2_row3_col13">0.00</td>
-<td class="data row3 col14" id="T_453c2_row3_col14">7.00</td>
-<td class="data row3 col15" id="T_453c2_row3_col15">0.00</td>
-<td class="data row3 col16" id="T_453c2_row3_col16">30.00</td>
-<td class="data row3 col17" id="T_453c2_row3_col17">0.00</td>
-<td class="data row3 col18" id="T_453c2_row3_col18">0.00</td>
-<td class="data row3 col19" id="T_453c2_row3_col19">4.00</td>
-<td class="data row3 col20" id="T_453c2_row3_col20">0.00</td>
-<td class="data row3 col21" id="T_453c2_row3_col21">37.00</td>
+<th class="row_heading level0 row3" id="T_4eb54_level0_row3">3</th>
+<td class="data row3 col0" id="T_4eb54_row3_col0">240.00</td>
+<td class="data row3 col1" id="T_4eb54_row3_col1">1.00</td>
+<td class="data row3 col2" id="T_4eb54_row3_col2">43.00</td>
+<td class="data row3 col3" id="T_4eb54_row3_col3">2.00</td>
+<td class="data row3 col4" id="T_4eb54_row3_col4">0.00</td>
+<td class="data row3 col5" id="T_4eb54_row3_col5">354.00</td>
+<td class="data row3 col6" id="T_4eb54_row3_col6">0.00</td>
+<td class="data row3 col7" id="T_4eb54_row3_col7">0.00</td>
+<td class="data row3 col8" id="T_4eb54_row3_col8">40.00</td>
+<td class="data row3 col9" id="T_4eb54_row3_col9">106.00</td>
+<td class="data row3 col10" id="T_4eb54_row3_col10">37.00</td>
+<td class="data row3 col11" id="T_4eb54_row3_col11">61.00</td>
+<td class="data row3 col12" id="T_4eb54_row3_col12">9.00</td>
+<td class="data row3 col13" id="T_4eb54_row3_col13">0.00</td>
+<td class="data row3 col14" id="T_4eb54_row3_col14">7.00</td>
+<td class="data row3 col15" id="T_4eb54_row3_col15">0.00</td>
+<td class="data row3 col16" id="T_4eb54_row3_col16">30.00</td>
+<td class="data row3 col17" id="T_4eb54_row3_col17">0.00</td>
+<td class="data row3 col18" id="T_4eb54_row3_col18">0.00</td>
+<td class="data row3 col19" id="T_4eb54_row3_col19">4.00</td>
+<td class="data row3 col20" id="T_4eb54_row3_col20">0.00</td>
+<td class="data row3 col21" id="T_4eb54_row3_col21">37.00</td>
 </tr>
 <tr>
-<th class="row_heading level0 row4" id="T_453c2_level0_row4">4</th>
-<td class="data row4 col0" id="T_453c2_row4_col0">300.00</td>
-<td class="data row4 col1" id="T_453c2_row4_col1">1.00</td>
-<td class="data row4 col2" id="T_453c2_row4_col2">41.00</td>
-<td class="data row4 col3" id="T_453c2_row4_col3">2.00</td>
-<td class="data row4 col4" id="T_453c2_row4_col4">0.00</td>
-<td class="data row4 col5" id="T_453c2_row4_col5">352.00</td>
-<td class="data row4 col6" id="T_453c2_row4_col6">0.00</td>
-<td class="data row4 col7" id="T_453c2_row4_col7">0.00</td>
-<td class="data row4 col8" id="T_453c2_row4_col8">40.00</td>
-<td class="data row4 col9" id="T_453c2_row4_col9">106.00</td>
-<td class="data row4 col10" id="T_453c2_row4_col10">36.00</td>
-<td class="data row4 col11" id="T_453c2_row4_col11">61.00</td>
-<td class="data row4 col12" id="T_453c2_row4_col12">9.00</td>
-<td class="data row4 col13" id="T_453c2_row4_col13">0.00</td>
-<td class="data row4 col14" id="T_453c2_row4_col14">8.00</td>
-<td class="data row4 col15" id="T_453c2_row4_col15">0.00</td>
-<td class="data row4 col16" id="T_453c2_row4_col16">31.00</td>
-<td class="data row4 col17" id="T_453c2_row4_col17">0.00</td>
-<td class="data row4 col18" id="T_453c2_row4_col18">0.00</td>
-<td class="data row4 col19" id="T_453c2_row4_col19">4.00</td>
-<td class="data row4 col20" id="T_453c2_row4_col20">0.00</td>
-<td class="data row4 col21" id="T_453c2_row4_col21">37.00</td>
+<th class="row_heading level0 row4" id="T_4eb54_level0_row4">4</th>
+<td class="data row4 col0" id="T_4eb54_row4_col0">300.00</td>
+<td class="data row4 col1" id="T_4eb54_row4_col1">1.00</td>
+<td class="data row4 col2" id="T_4eb54_row4_col2">41.00</td>
+<td class="data row4 col3" id="T_4eb54_row4_col3">2.00</td>
+<td class="data row4 col4" id="T_4eb54_row4_col4">0.00</td>
+<td class="data row4 col5" id="T_4eb54_row4_col5">352.00</td>
+<td class="data row4 col6" id="T_4eb54_row4_col6">0.00</td>
+<td class="data row4 col7" id="T_4eb54_row4_col7">0.00</td>
+<td class="data row4 col8" id="T_4eb54_row4_col8">40.00</td>
+<td class="data row4 col9" id="T_4eb54_row4_col9">106.00</td>
+<td class="data row4 col10" id="T_4eb54_row4_col10">36.00</td>
+<td class="data row4 col11" id="T_4eb54_row4_col11">61.00</td>
+<td class="data row4 col12" id="T_4eb54_row4_col12">9.00</td>
+<td class="data row4 col13" id="T_4eb54_row4_col13">0.00</td>
+<td class="data row4 col14" id="T_4eb54_row4_col14">8.00</td>
+<td class="data row4 col15" id="T_4eb54_row4_col15">0.00</td>
+<td class="data row4 col16" id="T_4eb54_row4_col16">31.00</td>
+<td class="data row4 col17" id="T_4eb54_row4_col17">0.00</td>
+<td class="data row4 col18" id="T_4eb54_row4_col18">0.00</td>
+<td class="data row4 col19" id="T_4eb54_row4_col19">4.00</td>
+<td class="data row4 col20" id="T_4eb54_row4_col20">0.00</td>
+<td class="data row4 col21" id="T_4eb54_row4_col21">37.00</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5bb6acc5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Get-Appliance-Metrics">Get Appliance Metrics<a class="anchor-link" href="#Get-Appliance-Metrics">¶</a></h2><p>The AMPDS Dataset contains the following appliances:</p>
+<ul>
+<li>RSE: Basement rental suite sub-meter.</li>
+<li>GRE: Detatched garage sub-meter.</li>
+<li>B1E: North bedroom plugs and lights.</li>
+<li>B2E: Master and south bedroom plugs and lights.</li>
+<li>BME: Basement plugs and lights.</li>
+<li>CWE: Front-loading clothes washer.</li>
+<li>DWE: Kitchen dishwasher.</li>
+<li>EQE: Security and network equipment.</li>
+<li>FRE: Forces air furnace fan and thermostat.</li>
+<li>HPE: Heat pump.</li>
+<li>OFE: Home office plugs and lights.</li>
+<li>UTE: Utility room plug.</li>
+<li>WOE: Kitchen convenction wall oven.</li>
+<li>CDE: Clothes Dryer</li>
+<li>DNE: Dining room plugs.</li>
+<li>EBE: Electronics workbench.</li>
+<li>FGE: Kitchen fridge.</li>
+<li>HTE: Instant hot water unit.</li>
+<li>OUE: Outside plug.</li>
+<li>TVE: Entertainment equipment (TV, amplifier, Blu-Ray).</li>
+<li>UNE: Unmetered.</li>
+</ul>
+<p>We are interested in a few key appliances with recgonizabe usage patterns, which are potentially shiftable or controllable, which makes identifying when they operate useful for energy managment. We select:</p>
+<ul>
+<li>Clothes washer (CWE)</li>
+<li>Dishwasher (DWE)</li>
+<li>Forced air-furnace fan and thermostat (FRE)</li>
+<li>Heat Pump (HPE)</li>
+<li>Wall Oven (WOE)</li>
+<li>Clothes Dryer (CDE)</li>
+<li>Kitchen Fridge (FGE)</li>
+<li>Intant hot-water unit (HTE)</li>
+</ul>
+<p>We trim the appliance data (<code>apps</code>) and appliance name list (<code>appliance_names</code>) to include only these key deferrable loads.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7982e0cd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">deferrable_loads</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'CWE'</span><span class="p">,</span> <span class="s1">'DWE'</span><span class="p">,</span> <span class="s1">'FRE'</span><span class="p">,</span> <span class="s1">'HPE'</span><span class="p">,</span> <span class="s1">'WOE'</span><span class="p">,</span> <span class="s1">'CDE'</span><span class="p">,</span> <span class="s1">'FGE'</span><span class="p">,</span> <span class="s1">'HTE'</span><span class="p">]</span>
+
+<span class="c1"># Select appliance columns, preserving the time and id columns</span>
+<span class="n">appliance_indices</span> <span class="o">=</span> <span class="p">[</span><span class="n">appliance_names</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">deferrable_loads</span><span class="p">]</span>
+<span class="n">column_indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">appliance_indices</span><span class="p">]</span>
+
+<span class="n">apps</span> <span class="o">=</span> <span class="n">apps</span><span class="p">[:,</span> <span class="n">column_indices</span><span class="p">]</span>
+<span class="n">apps_df</span> <span class="o">=</span> <span class="n">apps_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="n">column_indices</span><span class="p">]</span>
+<span class="n">apps_labels</span> <span class="o">=</span> <span class="n">apps_labels</span><span class="p">[</span><span class="n">column_indices</span><span class="p">]</span>
+<span class="n">appliance_names</span> <span class="o">=</span> <span class="n">deferrable_loads</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -8233,6 +8303,58 @@ Number of Appliances: 20
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Get-Appliance-Statistics">Get Appliance Statistics<a class="anchor-link" href="#Get-Appliance-Statistics">¶</a></h2><p>In NILM, some appliances are easier to predict than others. Appliances that are almost always on or almost always off can appear to have high prediction accuracy, even though their behavior is difficult to predict meaningfully. To better interpret our results, we should first characterize each appliance's load profile. For each appliance, we will identify whether is is almost always on or off, and calculate its minimum, maximum, mean, and median power, as well as its standard deviation.</p>
+<p>This function chooses an on/off power threshold for each appliance. For each appliance, it leaves the threshold as <code>0.0</code> if all readings are identical (continuous profile). Before determining the threshold, we temporarily remove the top percentile of data to decrease the influence of extreme high values. It finds the unique power levels and considers every possible split between neighborning levels. For each split, it calculates the between-class variance: how far apart the average readings are on the two sides of the split, weighted by how many readinfs fall on either side. It selects the split with the largest variance and sets the threshold halfway between those two levels. It ensures the threshold is not negative.</p>
+<p>The returned thresholds can then be used to classify readings as ON or OFF.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e85b3175">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">determine_on_threshold</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">upper_percentile</span><span class="o">=</span><span class="mi">99</span><span class="p">):</span>
+
+    <span class="n">thresholds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">apps</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">apps</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">apps</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span>
+
+        <span class="c1"># For constant profile, keep threshold as zero.</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">values</span> <span class="o">==</span> <span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span> <span class="k">continue</span>
+
+        <span class="c1"># Limit the influence of rare high readings when selecting the split.</span>
+        <span class="n">cap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">upper_percentile</span><span class="p">)</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">cap</span><span class="p">)</span>
+
+        <span class="n">levels</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">weights_left</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">counts</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">weights_right</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">size</span> <span class="o">-</span> <span class="n">weights_left</span>
+
+        <span class="n">means_left</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">levels</span> <span class="o">*</span> <span class="n">counts</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">weights_left</span>
+        <span class="n">means_right</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">levels</span> <span class="o">*</span> <span class="n">counts</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">levels</span> <span class="o">*</span> <span class="n">counts</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">weights_right</span>
+
+        <span class="n">between_class_variance</span> <span class="o">=</span> <span class="p">(</span><span class="n">weights_left</span> <span class="o">*</span> <span class="n">weights_right</span> <span class="o">*</span> <span class="p">(</span><span class="n">means_left</span> <span class="o">-</span> <span class="n">means_right</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+        
+        <span class="n">split</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">between_class_variance</span><span class="p">)</span>
+        <span class="n">thresholds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="p">(</span><span class="n">levels</span><span class="p">[</span><span class="n">split</span><span class="p">]</span> <span class="o">+</span> <span class="n">levels</span><span class="p">[</span><span class="n">split</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">thresholds</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4f5cffa5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>This function classifies the amount of time each appliance is ON versus OFF. An appliance is classified as ON when the power is above a certain theshold and OFF otherwise. The function returns an array of <code>ON_percent</code> values, one for each appliance.</p>
 </div>
 </div>
@@ -8245,8 +8367,8 @@ Number of Appliances: 20
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_percentages</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
-    <span class="n">is_on</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">apps</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">threshold</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_percentages</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">thresholds</span><span class="p">):</span>
+    <span class="n">is_on</span> <span class="o">=</span> <span class="n">apps</span> <span class="o">&gt;</span> <span class="n">thresholds</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span>
     <span class="k">return</span> <span class="n">is_on</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
 </pre></div>
 </div>
@@ -8272,14 +8394,15 @@ Number of Appliances: 20
 <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_appliance_metrics</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">on_threshold</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_appliance_metrics</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">on_thresholds</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="s2">"min"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
         <span class="s2">"max"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
         <span class="s2">"mean"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
         <span class="s2">"median"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
         <span class="s2">"std"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-        <span class="s1">'on_percentrage'</span><span class="p">:</span> <span class="n">on_percentages</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">on_threshold</span><span class="p">)}</span>
+        <span class="s1">'on_threshold'</span><span class="p">:</span> <span class="n">on_thresholds</span><span class="p">,</span>
+        <span class="s1">'on_percentrage'</span><span class="p">:</span> <span class="n">on_percentages</span><span class="p">(</span><span class="n">apps</span><span class="p">,</span> <span class="n">on_thresholds</span><span class="p">)}</span>
 </pre></div>
 </div>
 </div>
@@ -8293,7 +8416,8 @@ Number of Appliances: 20
 <div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">appliance_metrics</span> <span class="o">=</span> <span class="n">get_appliance_metrics</span><span class="p">(</span><span class="n">apps</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">:])</span> <span class="c1"># Exclude 'id' and 'time' columns.</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">appliance_on_thresholds</span> <span class="o">=</span> <span class="n">determine_on_threshold</span><span class="p">(</span><span class="n">apps</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">:])</span> <span class="c1"># Exclude 'id' and 'time' columns.</span>
+<span class="n">appliance_metrics</span> <span class="o">=</span> <span class="n">get_appliance_metrics</span><span class="p">(</span><span class="n">apps</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">:],</span> <span class="n">appliance_on_thresholds</span><span class="p">)</span> <span class="c1"># Exclude 'id' and 'time' columns.</span>
 <span class="n">metrics_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">appliance_metrics</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">appliance_names</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">metrics_df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.2f}</span><span class="s2">"</span><span class="p">)</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">"Appliance Metrics"</span><span class="p">))</span>
 </pre></div>
@@ -8310,202 +8434,167 @@ Number of Appliances: 20
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <style type="text/css">
 </style>
-<table id="T_d31cd">
+<table id="T_19d3a">
 <caption>Appliance Metrics</caption>
 <thead>
 <tr>
 <th class="blank level0"> </th>
-<th class="col_heading level0 col0" id="T_d31cd_level0_col0">min</th>
-<th class="col_heading level0 col1" id="T_d31cd_level0_col1">max</th>
-<th class="col_heading level0 col2" id="T_d31cd_level0_col2">mean</th>
-<th class="col_heading level0 col3" id="T_d31cd_level0_col3">median</th>
-<th class="col_heading level0 col4" id="T_d31cd_level0_col4">std</th>
-<th class="col_heading level0 col5" id="T_d31cd_level0_col5">on_percentrage</th>
+<th class="col_heading level0 col0" id="T_19d3a_level0_col0">min</th>
+<th class="col_heading level0 col1" id="T_19d3a_level0_col1">max</th>
+<th class="col_heading level0 col2" id="T_19d3a_level0_col2">mean</th>
+<th class="col_heading level0 col3" id="T_19d3a_level0_col3">median</th>
+<th class="col_heading level0 col4" id="T_19d3a_level0_col4">std</th>
+<th class="col_heading level0 col5" id="T_19d3a_level0_col5">on_threshold</th>
+<th class="col_heading level0 col6" id="T_19d3a_level0_col6">on_percentrage</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th class="row_heading level0 row0" id="T_d31cd_level0_row0">RSE</th>
-<td class="data row0 col0" id="T_d31cd_row0_col0">38.00</td>
-<td class="data row0 col1" id="T_d31cd_row0_col1">4265.00</td>
-<td class="data row0 col2" id="T_d31cd_row0_col2">275.34</td>
-<td class="data row0 col3" id="T_d31cd_row0_col3">175.00</td>
-<td class="data row0 col4" id="T_d31cd_row0_col4">414.28</td>
-<td class="data row0 col5" id="T_d31cd_row0_col5">100.00</td>
+<th class="row_heading level0 row0" id="T_19d3a_level0_row0">CWE</th>
+<td class="data row0 col0" id="T_19d3a_row0_col0">0.00</td>
+<td class="data row0 col1" id="T_19d3a_row0_col1">1002.00</td>
+<td class="data row0 col2" id="T_19d3a_row0_col2">14.85</td>
+<td class="data row0 col3" id="T_19d3a_row0_col3">0.00</td>
+<td class="data row0 col4" id="T_19d3a_row0_col4">73.87</td>
+<td class="data row0 col5" id="T_19d3a_row0_col5">111.00</td>
+<td class="data row0 col6" id="T_19d3a_row0_col6">5.30</td>
 </tr>
 <tr>
-<th class="row_heading level0 row1" id="T_d31cd_level0_row1">GRE</th>
-<td class="data row1 col0" id="T_d31cd_row1_col0">0.00</td>
-<td class="data row1 col1" id="T_d31cd_row1_col1">4.00</td>
-<td class="data row1 col2" id="T_d31cd_row1_col2">1.32</td>
-<td class="data row1 col3" id="T_d31cd_row1_col3">2.00</td>
-<td class="data row1 col4" id="T_d31cd_row1_col4">1.27</td>
-<td class="data row1 col5" id="T_d31cd_row1_col5">57.20</td>
+<th class="row_heading level0 row1" id="T_19d3a_level0_row1">DWE</th>
+<td class="data row1 col0" id="T_19d3a_row1_col0">0.00</td>
+<td class="data row1 col1" id="T_19d3a_row1_col1">0.00</td>
+<td class="data row1 col2" id="T_19d3a_row1_col2">0.00</td>
+<td class="data row1 col3" id="T_19d3a_row1_col3">0.00</td>
+<td class="data row1 col4" id="T_19d3a_row1_col4">0.00</td>
+<td class="data row1 col5" id="T_19d3a_row1_col5">0.00</td>
+<td class="data row1 col6" id="T_19d3a_row1_col6">0.00</td>
 </tr>
 <tr>
-<th class="row_heading level0 row2" id="T_d31cd_level0_row2">B1E</th>
-<td class="data row2 col0" id="T_d31cd_row2_col0">0.00</td>
-<td class="data row2 col1" id="T_d31cd_row2_col1">0.00</td>
-<td class="data row2 col2" id="T_d31cd_row2_col2">0.00</td>
-<td class="data row2 col3" id="T_d31cd_row2_col3">0.00</td>
-<td class="data row2 col4" id="T_d31cd_row2_col4">0.00</td>
-<td class="data row2 col5" id="T_d31cd_row2_col5">0.00</td>
+<th class="row_heading level0 row2" id="T_19d3a_level0_row2">FRE</th>
+<td class="data row2 col0" id="T_19d3a_row2_col0">102.00</td>
+<td class="data row2 col1" id="T_19d3a_row2_col1">116.00</td>
+<td class="data row2 col2" id="T_19d3a_row2_col2">107.33</td>
+<td class="data row2 col3" id="T_19d3a_row2_col3">105.00</td>
+<td class="data row2 col4" id="T_19d3a_row2_col4">4.59</td>
+<td class="data row2 col5" id="T_19d3a_row2_col5">109.00</td>
+<td class="data row2 col6" id="T_19d3a_row2_col6">32.70</td>
 </tr>
 <tr>
-<th class="row_heading level0 row3" id="T_d31cd_level0_row3">BME</th>
-<td class="data row3 col0" id="T_d31cd_row3_col0">6.00</td>
-<td class="data row3 col1" id="T_d31cd_row3_col1">474.00</td>
-<td class="data row3 col2" id="T_d31cd_row3_col2">100.85</td>
-<td class="data row3 col3" id="T_d31cd_row3_col3">7.00</td>
-<td class="data row3 col4" id="T_d31cd_row3_col4">165.69</td>
-<td class="data row3 col5" id="T_d31cd_row3_col5">100.00</td>
+<th class="row_heading level0 row3" id="T_19d3a_level0_row3">HPE</th>
+<td class="data row3 col0" id="T_19d3a_row3_col0">0.00</td>
+<td class="data row3 col1" id="T_19d3a_row3_col1">2813.00</td>
+<td class="data row3 col2" id="T_19d3a_row3_col2">597.87</td>
+<td class="data row3 col3" id="T_19d3a_row3_col3">37.00</td>
+<td class="data row3 col4" id="T_19d3a_row3_col4">821.90</td>
+<td class="data row3 col5" id="T_19d3a_row3_col5">545.00</td>
+<td class="data row3 col6" id="T_19d3a_row3_col6">32.70</td>
 </tr>
 <tr>
-<th class="row_heading level0 row4" id="T_d31cd_level0_row4">CWE</th>
-<td class="data row4 col0" id="T_d31cd_row4_col0">0.00</td>
-<td class="data row4 col1" id="T_d31cd_row4_col1">1002.00</td>
-<td class="data row4 col2" id="T_d31cd_row4_col2">14.85</td>
-<td class="data row4 col3" id="T_d31cd_row4_col3">0.00</td>
-<td class="data row4 col4" id="T_d31cd_row4_col4">73.87</td>
-<td class="data row4 col5" id="T_d31cd_row4_col5">7.60</td>
+<th class="row_heading level0 row4" id="T_19d3a_level0_row4">WOE</th>
+<td class="data row4 col0" id="T_19d3a_row4_col0">0.00</td>
+<td class="data row4 col1" id="T_19d3a_row4_col1">1.00</td>
+<td class="data row4 col2" id="T_19d3a_row4_col2">0.03</td>
+<td class="data row4 col3" id="T_19d3a_row4_col3">0.00</td>
+<td class="data row4 col4" id="T_19d3a_row4_col4">0.16</td>
+<td class="data row4 col5" id="T_19d3a_row4_col5">0.50</td>
+<td class="data row4 col6" id="T_19d3a_row4_col6">2.80</td>
 </tr>
 <tr>
-<th class="row_heading level0 row5" id="T_d31cd_level0_row5">DWE</th>
-<td class="data row5 col0" id="T_d31cd_row5_col0">0.00</td>
-<td class="data row5 col1" id="T_d31cd_row5_col1">0.00</td>
-<td class="data row5 col2" id="T_d31cd_row5_col2">0.00</td>
-<td class="data row5 col3" id="T_d31cd_row5_col3">0.00</td>
-<td class="data row5 col4" id="T_d31cd_row5_col4">0.00</td>
-<td class="data row5 col5" id="T_d31cd_row5_col5">0.00</td>
+<th class="row_heading level0 row5" id="T_19d3a_level0_row5">CDE</th>
+<td class="data row5 col0" id="T_19d3a_row5_col0">0.00</td>
+<td class="data row5 col1" id="T_19d3a_row5_col1">0.00</td>
+<td class="data row5 col2" id="T_19d3a_row5_col2">0.00</td>
+<td class="data row5 col3" id="T_19d3a_row5_col3">0.00</td>
+<td class="data row5 col4" id="T_19d3a_row5_col4">0.00</td>
+<td class="data row5 col5" id="T_19d3a_row5_col5">0.00</td>
+<td class="data row5 col6" id="T_19d3a_row5_col6">0.00</td>
 </tr>
 <tr>
-<th class="row_heading level0 row6" id="T_d31cd_level0_row6">EQE</th>
-<td class="data row6 col0" id="T_d31cd_row6_col0">29.00</td>
-<td class="data row6 col1" id="T_d31cd_row6_col1">47.00</td>
-<td class="data row6 col2" id="T_d31cd_row6_col2">39.84</td>
-<td class="data row6 col3" id="T_d31cd_row6_col3">40.00</td>
-<td class="data row6 col4" id="T_d31cd_row6_col4">2.55</td>
-<td class="data row6 col5" id="T_d31cd_row6_col5">100.00</td>
+<th class="row_heading level0 row6" id="T_19d3a_level0_row6">FGE</th>
+<td class="data row6 col0" id="T_19d3a_row6_col0">0.00</td>
+<td class="data row6 col1" id="T_19d3a_row6_col1">154.00</td>
+<td class="data row6 col2" id="T_19d3a_row6_col2">42.08</td>
+<td class="data row6 col3" id="T_19d3a_row6_col3">0.00</td>
+<td class="data row6 col4" id="T_19d3a_row6_col4">60.22</td>
+<td class="data row6 col5" id="T_19d3a_row6_col5">45.00</td>
+<td class="data row6 col6" id="T_19d3a_row6_col6">31.70</td>
 </tr>
 <tr>
-<th class="row_heading level0 row7" id="T_d31cd_level0_row7">FRE</th>
-<td class="data row7 col0" id="T_d31cd_row7_col0">102.00</td>
-<td class="data row7 col1" id="T_d31cd_row7_col1">116.00</td>
-<td class="data row7 col2" id="T_d31cd_row7_col2">107.33</td>
-<td class="data row7 col3" id="T_d31cd_row7_col3">105.00</td>
-<td class="data row7 col4" id="T_d31cd_row7_col4">4.59</td>
-<td class="data row7 col5" id="T_d31cd_row7_col5">100.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row8" id="T_d31cd_level0_row8">HPE</th>
-<td class="data row8 col0" id="T_d31cd_row8_col0">0.00</td>
-<td class="data row8 col1" id="T_d31cd_row8_col1">2813.00</td>
-<td class="data row8 col2" id="T_d31cd_row8_col2">597.87</td>
-<td class="data row8 col3" id="T_d31cd_row8_col3">37.00</td>
-<td class="data row8 col4" id="T_d31cd_row8_col4">821.90</td>
-<td class="data row8 col5" id="T_d31cd_row8_col5">96.80</td>
-</tr>
-<tr>
-<th class="row_heading level0 row9" id="T_d31cd_level0_row9">OFE</th>
-<td class="data row9 col0" id="T_d31cd_row9_col0">14.00</td>
-<td class="data row9 col1" id="T_d31cd_row9_col1">190.00</td>
-<td class="data row9 col2" id="T_d31cd_row9_col2">22.59</td>
-<td class="data row9 col3" id="T_d31cd_row9_col3">15.00</td>
-<td class="data row9 col4" id="T_d31cd_row9_col4">25.74</td>
-<td class="data row9 col5" id="T_d31cd_row9_col5">100.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row10" id="T_d31cd_level0_row10">UTE</th>
-<td class="data row10 col0" id="T_d31cd_row10_col0">8.00</td>
-<td class="data row10 col1" id="T_d31cd_row10_col1">9.00</td>
-<td class="data row10 col2" id="T_d31cd_row10_col2">8.96</td>
-<td class="data row10 col3" id="T_d31cd_row10_col3">9.00</td>
-<td class="data row10 col4" id="T_d31cd_row10_col4">0.21</td>
-<td class="data row10 col5" id="T_d31cd_row10_col5">100.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row11" id="T_d31cd_level0_row11">WOE</th>
-<td class="data row11 col0" id="T_d31cd_row11_col0">0.00</td>
-<td class="data row11 col1" id="T_d31cd_row11_col1">1.00</td>
-<td class="data row11 col2" id="T_d31cd_row11_col2">0.03</td>
-<td class="data row11 col3" id="T_d31cd_row11_col3">0.00</td>
-<td class="data row11 col4" id="T_d31cd_row11_col4">0.16</td>
-<td class="data row11 col5" id="T_d31cd_row11_col5">2.80</td>
-</tr>
-<tr>
-<th class="row_heading level0 row12" id="T_d31cd_level0_row12">B2E</th>
-<td class="data row12 col0" id="T_d31cd_row12_col0">7.00</td>
-<td class="data row12 col1" id="T_d31cd_row12_col1">76.00</td>
-<td class="data row12 col2" id="T_d31cd_row12_col2">14.77</td>
-<td class="data row12 col3" id="T_d31cd_row12_col3">8.00</td>
-<td class="data row12 col4" id="T_d31cd_row12_col4">18.09</td>
-<td class="data row12 col5" id="T_d31cd_row12_col5">100.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row13" id="T_d31cd_level0_row13">CDE</th>
-<td class="data row13 col0" id="T_d31cd_row13_col0">0.00</td>
-<td class="data row13 col1" id="T_d31cd_row13_col1">0.00</td>
-<td class="data row13 col2" id="T_d31cd_row13_col2">0.00</td>
-<td class="data row13 col3" id="T_d31cd_row13_col3">0.00</td>
-<td class="data row13 col4" id="T_d31cd_row13_col4">0.00</td>
-<td class="data row13 col5" id="T_d31cd_row13_col5">0.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row14" id="T_d31cd_level0_row14">DNE</th>
-<td class="data row14 col0" id="T_d31cd_row14_col0">0.00</td>
-<td class="data row14 col1" id="T_d31cd_row14_col1">31.00</td>
-<td class="data row14 col2" id="T_d31cd_row14_col2">2.12</td>
-<td class="data row14 col3" id="T_d31cd_row14_col3">0.00</td>
-<td class="data row14 col4" id="T_d31cd_row14_col4">6.25</td>
-<td class="data row14 col5" id="T_d31cd_row14_col5">16.70</td>
-</tr>
-<tr>
-<th class="row_heading level0 row15" id="T_d31cd_level0_row15">EBE</th>
-<td class="data row15 col0" id="T_d31cd_row15_col0">0.00</td>
-<td class="data row15 col1" id="T_d31cd_row15_col1">0.00</td>
-<td class="data row15 col2" id="T_d31cd_row15_col2">0.00</td>
-<td class="data row15 col3" id="T_d31cd_row15_col3">0.00</td>
-<td class="data row15 col4" id="T_d31cd_row15_col4">0.00</td>
-<td class="data row15 col5" id="T_d31cd_row15_col5">0.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row16" id="T_d31cd_level0_row16">FGE</th>
-<td class="data row16 col0" id="T_d31cd_row16_col0">0.00</td>
-<td class="data row16 col1" id="T_d31cd_row16_col1">154.00</td>
-<td class="data row16 col2" id="T_d31cd_row16_col2">42.08</td>
-<td class="data row16 col3" id="T_d31cd_row16_col3">0.00</td>
-<td class="data row16 col4" id="T_d31cd_row16_col4">60.22</td>
-<td class="data row16 col5" id="T_d31cd_row16_col5">46.70</td>
-</tr>
-<tr>
-<th class="row_heading level0 row17" id="T_d31cd_level0_row17">HTE</th>
-<td class="data row17 col0" id="T_d31cd_row17_col0">3.00</td>
-<td class="data row17 col1" id="T_d31cd_row17_col1">54.00</td>
-<td class="data row17 col2" id="T_d31cd_row17_col2">6.29</td>
-<td class="data row17 col3" id="T_d31cd_row17_col3">5.00</td>
-<td class="data row17 col4" id="T_d31cd_row17_col4">5.86</td>
-<td class="data row17 col5" id="T_d31cd_row17_col5">100.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row18" id="T_d31cd_level0_row18">OUE</th>
-<td class="data row18 col0" id="T_d31cd_row18_col0">0.00</td>
-<td class="data row18 col1" id="T_d31cd_row18_col1">3.00</td>
-<td class="data row18 col2" id="T_d31cd_row18_col2">0.01</td>
-<td class="data row18 col3" id="T_d31cd_row18_col3">0.00</td>
-<td class="data row18 col4" id="T_d31cd_row18_col4">0.15</td>
-<td class="data row18 col5" id="T_d31cd_row18_col5">1.10</td>
-</tr>
-<tr>
-<th class="row_heading level0 row19" id="T_d31cd_level0_row19">TVE</th>
-<td class="data row19 col0" id="T_d31cd_row19_col0">37.00</td>
-<td class="data row19 col1" id="T_d31cd_row19_col1">39.00</td>
-<td class="data row19 col2" id="T_d31cd_row19_col2">37.72</td>
-<td class="data row19 col3" id="T_d31cd_row19_col3">38.00</td>
-<td class="data row19 col4" id="T_d31cd_row19_col4">0.53</td>
-<td class="data row19 col5" id="T_d31cd_row19_col5">100.00</td>
+<th class="row_heading level0 row7" id="T_19d3a_level0_row7">HTE</th>
+<td class="data row7 col0" id="T_19d3a_row7_col0">3.00</td>
+<td class="data row7 col1" id="T_19d3a_row7_col1">54.00</td>
+<td class="data row7 col2" id="T_19d3a_row7_col2">6.29</td>
+<td class="data row7 col3" id="T_19d3a_row7_col3">5.00</td>
+<td class="data row7 col4" id="T_19d3a_row7_col4">5.86</td>
+<td class="data row7 col5" id="T_19d3a_row7_col5">12.00</td>
+<td class="data row7 col6" id="T_19d3a_row7_col6">7.40</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8c2e3fc9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># choose an appliance with a clear on/off pattern and a meaningful threshold</span>
+<span class="n">example_appliance</span> <span class="o">=</span> <span class="s1">'HPE'</span>
+<span class="n">appliance_idx</span> <span class="o">=</span> <span class="n">appliance_names</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">example_appliance</span><span class="p">)</span>
+<span class="n">series</span> <span class="o">=</span> <span class="n">apps</span><span class="p">[:,</span> <span class="n">appliance_idx</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">time_vals</span> <span class="o">=</span> <span class="n">apps</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">threshold</span> <span class="o">=</span> <span class="n">appliance_on_thresholds</span><span class="p">[</span><span class="n">appliance_idx</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1d6979ca">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># choose an appliance with a clear on/off pattern and a meaningful threshold</span>
+<span class="n">example_appliance</span> <span class="o">=</span> <span class="s1">'HPE'</span>
+<span class="n">appliance_idx</span> <span class="o">=</span> <span class="n">appliance_names</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">example_appliance</span><span class="p">)</span>
+<span class="n">series</span> <span class="o">=</span> <span class="n">apps</span><span class="p">[:,</span> <span class="n">appliance_idx</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>  <span class="c1"># Skip the time and id columns</span>
+<span class="n">time_vals</span> <span class="o">=</span> <span class="n">apps_df</span><span class="p">[</span><span class="s2">"time"</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">threshold</span> <span class="o">=</span> <span class="n">appliance_on_thresholds</span><span class="p">[</span><span class="n">appliance_idx</span><span class="p">]</span>
+
+<span class="c1"># show a manageable segment of the time series for visual inspection</span>
+<span class="n">start_idx</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">end_idx</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">series</span><span class="p">),</span> <span class="mi">300</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_vals</span><span class="p">[</span><span class="n">start_idx</span><span class="p">:</span><span class="n">end_idx</span><span class="p">],</span> <span class="n">series</span><span class="p">[</span><span class="n">start_idx</span><span class="p">:</span><span class="n">end_idx</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">example_appliance</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:blue"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">threshold</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"red"</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">"Threshold = </span><span class="si">{</span><span class="n">threshold</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> W"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">example_appliance</span><span class="si">}</span><span class="s2"> power draw with ON/OFF threshold"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Time (s)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Power (W)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
+<img alt="No description has been provided for this image" class="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABW4AAAGGCAYAAADrbBjiAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjExLjIsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvgI3uAAAAAAlwSFlzAAAPYQAAD2EBqD+naQAAjdJJREFUeJzt3QecU1X2wPEzvdB7B0FQmoIKooIFu2tX7K6uZdey7lr/9oKuLq7dVdfeu2Jd114RRURFQbAiSO9lgOmZ/D/nJi+8ZJJMZsjkvbz3+/qJmSSXzJvk1XPPPTcnGAwGBQAAAAAAAADgGrlOLwAAAAAAAAAAIBqBWwAAAAAAAABwGQK3AAAAAAAAAOAyBG4BAAAAAAAAwGUI3AIAAAAAAACAyxC4BQAAAAAAAACXIXALAAAAAAAAAC5D4BYAAAAAAAAAXIbALQAAAAAAAAC4DIFbAAAApM0bb7whOTk5MnnyZM99qvfdd5/52xYuXJhS+xtvvNG0X7t2bbMvG9z7mQ8dOlQOOuigtL7nmDFjZI899kip7bHHHitbbLFFWn8/AADIDAK3AAAgKz333HMmQDNx4sS4r59zzjnm9aVLl9b7N9YtLy9PunTpIkceeaTMnDkzYbvY2/XXX5+RvxHud8cdd9Rbz9Lthx9+kFNOOUX69OkjRUVF0qFDB9lnn33khRdeqNfWWnd13f7222/rvX7mmWea1ysrK+P+rgEDBsj555+/2b8/3m2nnXZqdDunPnMAAAA3IHALAAB858UXX5RgMCgVFRXy8ssvy4wZM0wG22+//Ra3XeztyiuvdGzZ4RwNeur337Nnz4z9Tl0Ht9tuO1m9erW8+uqrUlZWZtbXvffeW/74xz+aW11dXb1/p89dfPHFjfpds2fPll9//VUOPfTQzf798badL774osntAAAA/IjALQAA8K3CwkIZPXq03HrrrSYg9fDDDzu9SEBUputJJ50k++23nwmaagBVM1579Oghl1xyiTzyyCPy1FNPyb/+9a96n9oBBxwg7733nrz77rspf6KvvfaatG/f3nRibO7vBwAAwOYjcAsAAHxv4MCB5jNYsGBBWuts6lDuv/71r2ZoeatWreSII46Q33//vV77b775xtTAbNu2rRQXF8uwYcPkgQceiMqE1Pd75plnIs8tXrzYPNeyZUuprq6OPH/ttddKQUGBrF+/PvLc/PnzzVD37t27m2B137595ZprrpGampp6y7xs2TK54IILTAmJkpKSpH/nJ598Yoa16zLrMPp///vfST+PeO+tAUH7MPkWLVrIjjvuaAKC6fr77TbnvWJr3J533nmRsgLdunWL/A0ff/xx1O+sra2V//u//5NOnTqZv++QQw4xv7MhGhDVkga33HKLed9YJ5xwgmy//fZy00031St9cNZZZ0n//v1N1m28jNhEgdsDDzxQ8vPzN/v3N5d0fuYNrfNvvvmmqSPbunVr8/zOO+8sb7/9dr1tYK+99pKOHTtKmzZtzPbw9NNPm8zhWL/88ospMVFaWmq2RV2/4rW7//77zT5AtyvdJ+i+Yfr06Q1+Nvo9//Of/zTboi6vdkp9/fXXKXyqAADArQjcAgAA3/vpp5/MZ9CrV6+0fhYXXXSR7LLLLqYEgwaWNHCz++67R02cpIEVzXDUQNOXX34pixYtkpNPPlnOPvtsufzyy02bwYMHmyzHd955J/LvNJtSgzMbN26Uzz//PPL8+++/L6NGjTKBYjV37lwZMWKE+d3//e9/zZD3Bx98UB566CEzzD3eMmtm5Y8//pgwEKumTp0q++67r/nMNDNTl10DYMmyluO992GHHRYZIq+Bpzlz5sjhhx9uMj11eTf374+VzvfSWqu33367+XnJkiWRvyN20qjLLrtMhg8fbsoQfPjhh+Y7P/XUU6UhGiTUmrN6S+QPf/iDWZ/0+7DTgLMG8b777jt58sknG/xd2smg36G9TMLm/P7m0hyfebz1UoP0GjDV4OesWbNMsF6DvxrYfv31102befPmmczmQYMGmRrZujz33HOPWbd0e7PTz0izlDXIrZ+1/jx+/HgT5LXTbV47e3T9132BfieBQCClIKwGqjUYrO+hy6J/wxVXXEEtYAAAslkQAAAgCz377LOaqtbgbcmSJfX+zYsvvmgeV1VVBT/77LPggAEDgi1btgz+8ssvKb33p59+mnTZJkyYYNr94x//iHp+5syZwZycnOB1110XeW7fffcNtm/fPrh+/fqotqeddlowPz8/uGDBAvP45JNPDnbr1i3y+gknnBA8+OCDg0OHDg1efvnl5rmysjLzb8aPHx9pd9RRR5n3X7lyZdT7T5w40SzjtGnTopb52muvTenz32effYLdu3c3n6Hd3nvvXe8zaux7qz322CN40EEH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bI1bJicDAAAA4FYaLLXr0qWLrIwJHGuZAjuNc/38889mMi3N7rRuGqD89ddfTeD2iCOOMOUVNCv3gAMOMJmwscFW++/W36v0d2vgVkseaOkGDdpatParTmymJRT0d8Sy/o0GbS2aKdwQzardHJqJbMX6NOC9ceNGk118ySWXmHigZgtrlq0GZTfnfWLpZxvvef3MkpWU0M9RA7OXXnqpubcmINMArvX4448/rhdo91SpBP3wBg8ebD50jWZrMFbTnTW92j5rnvZEzJs3z3wo1k0j7HZaj2O77bYzvQ4jR440vRiaLm6fJS6VNgCAzCDjFgAAAPC4DRsS3156Kbrt8uWJ2771VnTbefPit2smmnEayx63UrFD+3USLA3Eam3Uzz77zARyp0yZYsolWEFADdxqzKt79+6mxEHXrl3lpptuSvl3a4A2NtPVeqyvxaPPa5auXezj5iiVYE/QVDvttJP5jDRbVunEcNOnTzexQX0/reur9t5776hgbkPvE6tTp071guyaRKplJvS1RPS70++tvLzcfHfWZGgauNWA7W+//WZKOzR3fVtHM271w9bUcv1SLBr116xbLR68ww47RJ7XL01ngUtEI+DaQ6C1QZQWZta06UcffTSSqp5KGwCAAzVua5MXzwcAAACQhRozwrm52jpEExSff/55kyVrz4iN105vmjX67LPPmgxcLc2QCi2toBNv2WnwU+kkafHo81piIDYLN5l0lEqIpYFPjQtq6Qj17rvvRiVWzpgxwwRvn3766XrZzMneJ5ZmHWvgVrOft9pqK/OcBtOt1xLROreazXv33XebkfqaeKo0AXTWrFlmgjoN1msc07MZt/rB2oO2Sosjq9WrV0c9rx+K1hPRAs9akDm2t0BXOnt0X2eY06i3tQKn0gYAkDkBWw81NW4BAAAAeMlZZ51lJrHSIOyGcDaw1pLVkebW5FbXXHONmSBLM1o1i1Zf17q4ySbmstPJsjQg+e9//9uMal++fLmpbasTqGn2bjxaE1YDtQ8++KD5nZo1esMNNzT4uxrKuE2WvapxPJ2gTTNjldavvfrqq+XQQw81sTmlNWXt76ePVZcuXSJB2VTex1pWLbtqBWA16KqlFDR7VjNtr7rqKpM5qwHzRDTIq5nQWqbVqkGs2rdvb97vlltuMZPJNTZgnVWB23g0kq31POxRb43sa3Rd0591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AAAAICECtwCAjApESiUwORkAAAAAAIkQuAUAZFTAXiohPzw5WW0d3wIAAAAAADb54rDVq1fL119/Lfn5+TJ8+HBp165dvTZ1dXUydepUWbZsmQwdOlT69+/fbG0AAJmpcZubkyPFBaH+w6qaAB87AAAAAABuyLgNBoNy1llnyTbbbCM333yzXHXVVdKnTx955JFHotqtW7dORo8eLePGjZN77rlHhg0bJpdeemmztAEANL9AXSi7Nj/PNjkZGbcAAAAAALgj41YDtxo8vfPOO6WwsNA8d++998oZZ5whe++9t/Tu3ds8d8UVV5is3NmzZ0ubNm1k8uTJsuuuu8o+++wje+21V1rbAAAyVyrBXuO2urbOHBdycnL4CgAAAAAAcDLjNjc3V84888xI0FYdeeSRUltbK99//715rBfxTz/9tJx22mkm2KrGjBkjO+64ozz11FNpbQMAcKLG7abDEHVuAQAAAABwUY1bu/fff99kWw0ePNg8Xrhwoaxdu9bUo7XT8grffvttWtvEU1VVZW6WsrKyNPyVAOBv9hq31uRkVuC2OFw6AQAAAAAAv3Ms4zbWvHnz5LzzzjN1b7fYYotIXVrVvn37qLYdOnQwgdh0tolnwoQJJkPXuvXq1SsNfykA+Fsk4zYvRwryciQ3XB2hqpYJygAAAAAAcFXgdvHixabW7KhRo+SOO+6IPF9UVGTuN2zYENVeHxcXF6e1TTyXXXaZCfpatwULFmzmXwoA2FTjNteMsrCybqtqQpOWAQAAAAAAF5RK0KDt2LFjZauttpKJEydKQUFB5DWdoCw/P1/mz58f9W9+//136devX1rbxKMBXyvoCwBIb6mEvPBEZEUFuVJREyDjFgAAAAAAt2TcLlmyxARt+/fvLy+//HK9IKk+3muvveTFF1+MPLdy5Ur58MMP5cADD0xrGwBApjNuw4Hb8ARllWTcAgAAAADgfMatTvqlwVStMXv00UfLK6+8Enltxx13jGTC3njjjTJmzBj54x//KDvvvLM89NBDMmjQIPnTn/4UaZ+uNgCADNa4jQRuw6USaimVAAAAAACA4xm31dXVsu2225qM27feekteffXVyE1LGFiGDx8u33zzjXTr1k2mTp0qxx9/vEyaNCkqOzddbQAAGcy4zQsFbosLQoeiqhomJwMAAAAAwPGM21atWslzzz2XUlutf3vT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InjTTTc5vVjwgGuvvTaYk5MTvO2224Kffvpp5DZ79uxIm+OOOy544YUXmpmAJ06cGNx3332Dbdq0Cc6YMSPSRme93GKLLYL7779/8LXXXgtedNFFZhb0yZMnN6oNcOeddwaPOeaY4NNPPx383//+Z2ZQz8/PDz766KON3i+mqw2g3n77bTNLtc7mG+vLL78M7rzzzsEHHngg+M4775gZgVu1ahX885//HNXu1ltvDZaWlgbvueee4PPPPx8cMGBA8JBDDml0G/iPzoCux+cjjjgiOHjw4Mjxuq6uLtLm4IMPDm611VZmvdH1R2el1uO7XSbbwNt+/fVXsw7+4x//MPvGDz74wDxes2aNeX3+/PnB7t27B0eMGBH85JNPos4zN27caNqw70Q6rVixwqxfb7zxhlknb7nlFvN43rx5kTYDBw4M3nzzzcG33nor+PDDD5tzwOHDh0fWSTVlypRgYWGhuf7Ra5YDDjgg2Lt378i6nc428LaqqqrIfk+/+5NOOsn8bL+Otui+8thjj437PkceeWTwkksuMevRiy++GBw7dmywffv2wR9++CHSZtWqVcGePXua4/Prr78ePPfcc4NFRUVmP9uYNmi6HP3f5gR+kd201p3OVK0zYGpmohZQP+GEE5xeLHjAGWecIbNmzar3vGbBWjNVao+cZkm8//77phdQe/b+/ve/R4ayWZYsWSI33nijfP/996Z21DnnnFMvazGVNoDWWX7xxRfNBGVa4/Yvf/mLDBs2rNH7xXS1AdSECRPMkN/HH3887gfy3XffmWHAmrmjkzrqxGRaSy/Ws88+a2qSaZ07zUTT+uKxGbyptIG/6H5JayzH0n2XVS9Rs7luv/12MyqmpKREjj32WDnuuOOi2meyDbztlltuidQFtdMJyDTz+vPPPzejuuLRCXX69u1rfmbfiXTRGvTXXHNNvee1trJOwKyWL18ud911l3z99dfSpk0bU0tUzzNj685OnTrVtNNrFx05c8kll5hje3O0gXfptYyeD8badttt5T//+U/ksY6s0msQPdccM2ZMvfZ6vXL//febY66GBvXf6/V4x44do9rpxHt6ra11xbVch7axz1WTahs0DYFbAAAAAAAAAHAZatwCAAAAAAAAgMsQuAUAAAAAAAAAlyFwCwAAAAAAAAAuQ+AWAAAAAAAAAFyGwC0AAAAAAAAAuAyBWwAAAAAAAABwGQK3AAAAAAAAAOAyBG4BAADge1999ZV89tlnjn4OH374ocyfP7/BdpMnT5Zff/01I8sEAAAA5+Q7+LsBAACAZjVjxgyZPXt20jaHHnqoPPTQQ7Jy5UoZPXq0I9/IrFmz5Pjjj5effvqpwbaLFi2S888/X6ZOnSq5ueRhAAAAeBWBWwAAAHiWBkRfe+21yGP9ecCAATJ48ODIc/vuu6+MHDlS1q9f79BSilxxxRVyxhlnSJs2bRpse/TRR8vll18uL730khx11FEZWT4AAABkXk4wGAw68HsBAACAjOvataucc845cuWVV9YrlVBVVRXJuP3iiy8kJydHhgwZItOnT5eysjLZfffdpWXLluZnLatQVFQku+yyixQXF8fN9P3tt9+kV69est122yXNjNXyCH379jXlD/TeMm/ePPn++++lU6dOsv3220tBQUHktWuuuUY++eQT+fjjj9P0yQAAAMBtyLgFAACA78WWSrj77rtl5syZsnbtWhO81aDqhg0bZMKECTJ+/HiTsfvDDz+YDNkpU6ZEgrca1B03bpz8+OOPMnz4cHPfrl07+e9//yudO3eO+zm/+eab0rt376igrf6O2267TXbddVfznvq7X3755UibPffcU2644QZZt25dSlm6AAAAyD4EbgEAAIA45syZI999951sueWWJhtX788991zzXJ8+fWTjxo3m/oUXXpCTTjrJ/ButPatBXP23miEbCATkyCOPlIsvvlgee+yxuJ/zN998E1W6QX+XBmXfffddGTt2rHlOa99WVFRE2myzzTbmvfXfWm0AAADgLQRuAQAAgDj22msvE6xVWhZBSx6UlpaaYK1q0aKFCaD+/PPP5nF1dbU888wzJrirtXS1IpneevbsaTJuE9FMX83KtWhZhcLCQpPxq+UZ9PHWW28d9W/atm0b+bcAAADwJgK3AAAAQBz2YKoVvI33XGVlpfl56dKl5metiav1ae00AJuI1s21T4ymmbpPPfWUXHjhhXL99debf3vcccfJEUccEWlTXl5u7lu1asV3BwAA4FEEbgEAAIA0sIKoZ5xxRlSQtSFbbbWVTJw4Meq5ww8/3Nw0m1dr4J5yyimycOFC+fvf/25enzt3rrmPzcQFAACAdySe3hYAAABAyjQbd9SoUXL//febEgl2ixYtSlqS4fvvvzcTjVnZtDopmhXUPe+88+Sggw6SL774IvJvPvvsM+nXr1/UhGYAAADwFjJuAQAAgDS57777ZO+99za3cePGmQnF3nvvPRk4cKDcfvvtcf/NzjvvLIMGDZIXX3xRTj/9dBPA3XXXXeXQQw+VoUOHyvz58+XVV1+VJ598MvJvnn/+edMWAAAA3kXgFgAAAL5x2GGHyZAhQ+o9P3LkyKg6sxpM1UnB7MaMGVOvpuwee+whvXr1ijwePny4zJo1Sx577DGZOnWqdOrUSc4//3zZd999ky7XVVddJTfccIOcdtpp0q1bN5k2bZo8+uijMnnyZGnfvr188MEHstNOO5m2M2bMML/j5ZdfbvLnAAAAAPfLCcaO4wIAAACQcRdccIEJ3MYLLNs98MADJpirGb0AAADwLgK3AAAAAAAAAOAyTE4GAAAAAAAAAC5D4BYAAAAAAAAAXIbALQAAAAAAAAC4DIFbAAAAAAAAAHAZArcAAAAAAAAA4DIEbgEAAAAAAADAZQjcAgAAAAAAAIDLELgFAAAAAAAAAJchcAsAAAAAAAAALkPgFgAAAAAAAABchsAtAAAAAAAAAIi7/D/VRFem2jHRZQAAAABJRU5ErkJggg=="/>
 </div>
 </div>
 </div>
@@ -8530,195 +8619,29 @@ $</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [71]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">normalize_data</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">x_min</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">x_max</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x_min</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">x_max</span> <span class="o">-</span> <span class="n">x_min</span> <span class="o">+</span> <span class="mf">1e-8</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x_min</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">x_max</span> <span class="o">-</span> <span class="n">x_min</span> <span class="o">+</span> <span class="mf">1e-8</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5a4349e9">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5a4349e9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">agg_min</span><span class="p">,</span> <span class="n">agg_max</span><span class="p">,</span> <span class="n">agg_norm</span> <span class="o">=</span> <span class="n">normalize_data</span><span class="p">(</span><span class="n">agg</span><span class="p">)</span>
-<span class="n">apps_min</span><span class="p">,</span> <span class="n">apps_max</span><span class="p">,</span> <span class="n">apps_norm</span> <span class="o">=</span> <span class="n">normalize_data</span><span class="p">(</span><span class="n">apps</span><span class="p">)</span>
-
-<span class="c1"># Discard min and max values for 'id' and 'time' columns.</span>
-<span class="n">agg_min_vals</span> <span class="o">=</span> <span class="n">agg_min</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span>
-<span class="n">agg_max_vals</span> <span class="o">=</span> <span class="n">agg_max</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span>
-<span class="n">apps_min_vals</span> <span class="o">=</span> <span class="n">apps_min</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span>
-<span class="n">apps_max_vals</span> <span class="o">=</span> <span class="n">apps_max</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span>
-
-<span class="n">scaling_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-    <span class="p">{</span>
-        <span class="s2">"min"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">agg_min_vals</span><span class="p">,</span> <span class="n">apps_min_vals</span><span class="p">]),</span>
-        <span class="s2">"max"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">agg_max_vals</span><span class="p">,</span> <span class="n">apps_max_vals</span><span class="p">]),</span>
-    <span class="p">},</span>
-    <span class="n">index</span><span class="o">=</span><span class="n">electrical_quantities</span> <span class="o">+</span> <span class="n">appliance_names</span><span class="p">)</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">scaling_df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.2f}</span><span class="s2">"</span><span class="p">)</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s1">'Scaling Factors'</span><span class="p">))</span>
-
-<span class="n">scaling_factors</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">'agg_min'</span><span class="p">:</span> <span class="n">agg_min_vals</span><span class="p">,</span>
-    <span class="s1">'agg_max'</span><span class="p">:</span> <span class="n">agg_max_vals</span><span class="p">,</span>
-    <span class="s1">'apps_min'</span><span class="p">:</span> <span class="n">apps_min_vals</span><span class="p">,</span>
-    <span class="s1">'apps_max'</span><span class="p">:</span> <span class="n">apps_max_vals</span><span class="p">}</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">agg_norm</span> <span class="o">=</span> <span class="n">normalize_data</span><span class="p">(</span><span class="n">agg</span><span class="p">)</span>
+<span class="n">apps_norm</span> <span class="o">=</span> <span class="n">normalize_data</span><span class="p">(</span><span class="n">apps</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<style type="text/css">
-</style>
-<table id="T_52c56">
-<caption>Scaling Factors</caption>
-<thead>
-<tr>
-<th class="blank level0"> </th>
-<th class="col_heading level0 col0" id="T_52c56_level0_col0">min</th>
-<th class="col_heading level0 col1" id="T_52c56_level0_col1">max</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th class="row_heading level0 row0" id="T_52c56_level0_row0">P-agg</th>
-<td class="data row0 col0" id="T_52c56_row0_col0">301.00</td>
-<td class="data row0 col1" id="T_52c56_row0_col1">5757.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row1" id="T_52c56_level0_row1">I-agg</th>
-<td class="data row1 col0" id="T_52c56_row1_col0">3.70</td>
-<td class="data row1 col1" id="T_52c56_row1_col1">93.30</td>
-</tr>
-<tr>
-<th class="row_heading level0 row2" id="T_52c56_level0_row2">Q-agg</th>
-<td class="data row2 col0" id="T_52c56_row2_col0">94.00</td>
-<td class="data row2 col1" id="T_52c56_row2_col1">1797.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row3" id="T_52c56_level0_row3">S-agg</th>
-<td class="data row3 col0" id="T_52c56_row3_col0">514.00</td>
-<td class="data row3 col1" id="T_52c56_row3_col1">5785.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row4" id="T_52c56_level0_row4">RSE</th>
-<td class="data row4 col0" id="T_52c56_row4_col0">38.00</td>
-<td class="data row4 col1" id="T_52c56_row4_col1">4265.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row5" id="T_52c56_level0_row5">GRE</th>
-<td class="data row5 col0" id="T_52c56_row5_col0">0.00</td>
-<td class="data row5 col1" id="T_52c56_row5_col1">4.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row6" id="T_52c56_level0_row6">B1E</th>
-<td class="data row6 col0" id="T_52c56_row6_col0">0.00</td>
-<td class="data row6 col1" id="T_52c56_row6_col1">0.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row7" id="T_52c56_level0_row7">BME</th>
-<td class="data row7 col0" id="T_52c56_row7_col0">6.00</td>
-<td class="data row7 col1" id="T_52c56_row7_col1">474.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row8" id="T_52c56_level0_row8">CWE</th>
-<td class="data row8 col0" id="T_52c56_row8_col0">0.00</td>
-<td class="data row8 col1" id="T_52c56_row8_col1">1002.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row9" id="T_52c56_level0_row9">DWE</th>
-<td class="data row9 col0" id="T_52c56_row9_col0">0.00</td>
-<td class="data row9 col1" id="T_52c56_row9_col1">0.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row10" id="T_52c56_level0_row10">EQE</th>
-<td class="data row10 col0" id="T_52c56_row10_col0">29.00</td>
-<td class="data row10 col1" id="T_52c56_row10_col1">47.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row11" id="T_52c56_level0_row11">FRE</th>
-<td class="data row11 col0" id="T_52c56_row11_col0">102.00</td>
-<td class="data row11 col1" id="T_52c56_row11_col1">116.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row12" id="T_52c56_level0_row12">HPE</th>
-<td class="data row12 col0" id="T_52c56_row12_col0">0.00</td>
-<td class="data row12 col1" id="T_52c56_row12_col1">2813.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row13" id="T_52c56_level0_row13">OFE</th>
-<td class="data row13 col0" id="T_52c56_row13_col0">14.00</td>
-<td class="data row13 col1" id="T_52c56_row13_col1">190.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row14" id="T_52c56_level0_row14">UTE</th>
-<td class="data row14 col0" id="T_52c56_row14_col0">8.00</td>
-<td class="data row14 col1" id="T_52c56_row14_col1">9.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row15" id="T_52c56_level0_row15">WOE</th>
-<td class="data row15 col0" id="T_52c56_row15_col0">0.00</td>
-<td class="data row15 col1" id="T_52c56_row15_col1">1.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row16" id="T_52c56_level0_row16">B2E</th>
-<td class="data row16 col0" id="T_52c56_row16_col0">7.00</td>
-<td class="data row16 col1" id="T_52c56_row16_col1">76.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row17" id="T_52c56_level0_row17">CDE</th>
-<td class="data row17 col0" id="T_52c56_row17_col0">0.00</td>
-<td class="data row17 col1" id="T_52c56_row17_col1">0.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row18" id="T_52c56_level0_row18">DNE</th>
-<td class="data row18 col0" id="T_52c56_row18_col0">0.00</td>
-<td class="data row18 col1" id="T_52c56_row18_col1">31.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row19" id="T_52c56_level0_row19">EBE</th>
-<td class="data row19 col0" id="T_52c56_row19_col0">0.00</td>
-<td class="data row19 col1" id="T_52c56_row19_col1">0.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row20" id="T_52c56_level0_row20">FGE</th>
-<td class="data row20 col0" id="T_52c56_row20_col0">0.00</td>
-<td class="data row20 col1" id="T_52c56_row20_col1">154.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row21" id="T_52c56_level0_row21">HTE</th>
-<td class="data row21 col0" id="T_52c56_row21_col0">3.00</td>
-<td class="data row21 col1" id="T_52c56_row21_col1">54.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row22" id="T_52c56_level0_row22">OUE</th>
-<td class="data row22 col0" id="T_52c56_row22_col0">0.00</td>
-<td class="data row22 col1" id="T_52c56_row22_col1">3.00</td>
-</tr>
-<tr>
-<th class="row_heading level0 row23" id="T_52c56_level0_row23">TVE</th>
-<td class="data row23 col0" id="T_52c56_row23_col0">37.00</td>
-<td class="data row23 col1" id="T_52c56_row23_col1">39.00</td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 </div>
@@ -8773,7 +8696,7 @@ $</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">precompute_indices</span><span class="p">(</span>
@@ -8839,7 +8762,7 @@ $</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [74]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">expected_num_windows</span><span class="p">,</span> <span class="n">num_windows</span><span class="p">,</span> <span class="n">idx_dict</span> <span class="o">=</span> <span class="n">precompute_indices</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">window_length</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span> <span class="n">train_val_test_split</span><span class="p">,</span> <span class="n">num_chunks</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
@@ -8873,7 +8796,7 @@ Number of Windows Discarded: 116
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [75]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Show the number of windows and unique timestamps covered in each split</span>
@@ -8908,7 +8831,7 @@ Test  : 171 windows, 200 unique timestamps
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [76]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Recompute the train/validation/test proportions from the assigned windows.</span>
@@ -8969,7 +8892,7 @@ Real Train/Val/Test Split: [0.6, 0.2, 0.2]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [77]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">dataset_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">processed_data_dir</span><span class="p">,</span> <span class="s1">'ampds_dataset.npz'</span><span class="p">)</span>
@@ -8980,7 +8903,7 @@ Real Train/Val/Test Split: [0.6, 0.2, 0.2]
     <span class="n">appliance_names</span><span class="o">=</span><span class="n">appliance_names</span><span class="p">,</span>
     <span class="n">agg_norm</span><span class="o">=</span><span class="n">agg_norm</span><span class="p">,</span>
     <span class="n">apps_norm</span><span class="o">=</span><span class="n">apps_norm</span><span class="p">,</span>
-    <span class="o">**</span><span class="n">scaling_factors</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">appliance_metrics</span><span class="p">,</span>
     <span class="o">**</span><span class="n">idx_dict</span><span class="p">,</span>
     <span class="n">train_val_test_split</span><span class="o">=</span><span class="n">real_train_val_test_split</span><span class="p">,</span>
     <span class="n">T</span><span class="o">=</span><span class="n">real_num_unique_timestamps</span><span class="p">,</span>
