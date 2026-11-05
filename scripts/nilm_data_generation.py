@@ -3,7 +3,7 @@ import numpy as np
 from scipy.io import loadmat
 
 # Directories
-scripts_dir = os.getcwd()
+scripts_dir = os.path.dirname(__file__)
 base_dir = os.path.join(scripts_dir, '..')
 data_dir = os.path.join(base_dir, 'data')
 processed_data_dir = os.path.join(base_dir, 'processed_data')
@@ -12,9 +12,11 @@ smart_meter_data_folderpath = os.path.join(data_dir, 'smart_meter_data')
 ampds_folderpath = os.path.join(smart_meter_data_folderpath, 'ampds')
 ampds_filepath = os.path.join(ampds_folderpath, 'ampds2.mat')
 
-# Data Generation Settings
+# Fixed Settings - Constant for AMPds2 Data
 time_resolution = 60
 time_units = 'seconds'
+
+# Data Generation Settings
 T_limit = None
 train_val_test_split = [0.7, 0.15, 0.15]
 window_length, stride = 30, 30
@@ -37,6 +39,7 @@ appliance_names = [name for name in appliance_names if name not in ("time", "id"
 T = agg_data.shape[0]
 T = min(T, T_limit) if T_limit is not None else T
 agg_data, apps_data = agg_data[:T_limit], apps_data[:T_limit]
+apps_data = apps_data[:,:,0] # For appliances, keep only real power P
 
 # Select Target Appliances Only
 appliance_names = target_appliances if target_appliances is not None else appliance_names
