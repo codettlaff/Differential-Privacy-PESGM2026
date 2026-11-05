@@ -125,4 +125,4 @@ def compute_distance_metrics(dataset_name):
     combined_lookup_filepath = os.path.join(results_dir, dataset_name + '_combined_distance_metric_lookup.pkl')
     with open(combined_lookup_filepath, 'wb') as f: pickle.dump(combined_lookup, f)
 
-compute_distance_metrics(mini_dataset_name)
+# compute_distance_metrics(mini_dataset_name)
