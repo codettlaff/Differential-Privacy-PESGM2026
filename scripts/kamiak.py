@@ -1,0 +1,4 @@
+from pattern_matching_distance_metrics import compute_distance_metrics
+
+full_dataset_name = 'ampds_pattern-matching_full'
+compute_distance_metrics(full_dataset_name)
