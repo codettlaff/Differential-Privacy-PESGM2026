@@ -3,15 +3,25 @@ import numpy as np
 from scipy.io import loadmat
 
 # Data Generation Settings
-T_limit = None
+T_limit = 1000
 train_val_test_split = [0.7, 0.15, 0.15]
 window_length, stride = 30, 30
 chunk_size = 1440 # One-Day
 target_appliances = ['CWE', 'DWE', 'FRE', 'HPE', 'WOE', 'CDE', 'FGE', 'HTE']
 rand_seed = 42
-dataset_name = 'ampds_pattern-matching_full'
+dataset_name = 'ampds_pattern-matching_mini'
 
-def generate_data(T_limit, train_val_test_split, window_length, stride, target_appliances, rand_seed, dataset_name):
+pattern_matching_mini_settings = {
+    'T_limit': 3000,
+    'train_val_test_split': [0.7, 0.15, 0.15],
+    'window_length': 30,
+    'stride': 30,
+    'chunk_size': 300,
+    'target_appliances': ['CWE', 'DWE', 'FRE', 'HPE', 'WOE', 'CDE', 'FGE', 'HTE'],
+    'rand_seed': 42,
+    'dataset_name': 'ampds_pattern-matchin_mini'}
+
+def generate_data(T_limit, train_val_test_split, window_length, stride, chunk_size, target_appliances, rand_seed, dataset_name):
 
     # Directories
     scripts_dir = os.path.dirname(__file__)
@@ -203,3 +213,5 @@ def generate_data(T_limit, train_val_test_split, window_length, stride, target_a
         stride=stride,
         chunk_size=chunk_size,
         num_chunks=num_chunks)
+
+generate_data(**pattern_matching_mini_settings)
