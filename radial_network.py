@@ -488,6 +488,47 @@ class RadialNetwork:
             'i': i_branch,
             'p': p,
             'q': q}
+
+    def display_results(self, results, t=0, show=False, return_results=False, save=False, save_folderpath=None):
+
+        # Node Table
+        node_data = []
+        for i in self.nodes:
+            node_data.append({
+                'node': i,
+                'V': results['V'][i][t],
+                'P': self.P[i][t],
+                'Q': self.Q[i][t]})
+        df_nodes = pd.DataFrame(node_data).sort_values(by='node')
+
+        # Line Table
+        line_data = []
+        for (i, j) in self.lines:
+            line_data.append({
+                'from': i,
+                'to': j,
+                'r1': self.r1[(i, j)],
+                'x1': self.x1[(i, j)],
+                'r0': self.r0[(i, j)],
+                'x0': self.x0[(i, j)],
+                'p_flow': results['p'][(i, j)][t],
+                'q_flow': results['q'][(i, j)][t],
+                'i_flow': results['i'][(i, j)][t],
+                'v_drop': results['v'][(i, j)][t]})
+        df_lines = pd.DataFrame(line_data).sort_values(by=['from', 'to'])
+
+        # Display
+        if show:
+            print(f"\n=== NODE STATES (t={t}) ===")
+            print(df_nodes.to_string(index=False))
+            print(f"\n=== LINE STATES (t={t}) ===")
+            print(df_lines.to_string(index=False))
+
+        if save:
+            df_nodes.to_csv(os.path.join(save_folderpath, "node_data.csv"))
+            df_lines.to_csv(os.path.join(save_folderpath, "line_data.csv"))
+
+        if return_results: return node_data, line_data
     
 
     
