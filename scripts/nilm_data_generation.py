@@ -24,6 +24,26 @@ pattern_matching_full_settings = {
     'rand_seed': 42,
     'dataset_name': 'ampds_pattern-matching_full'}
 
+cnn_mini_settings = {
+    'T_limit': 3000,
+    'train_val_test_split': [0.7, 0.15, 0.15],
+    'window_length': 30,
+    'stride': 1,
+    'chunk_size': 300,
+    'target_appliances': ['CWE', 'DWE', 'FRE', 'HPE', 'WOE', 'CDE', 'FGE', 'HTE'],
+    'rand_seed': 42,
+    'dataset_name': 'ampds_cnn_mini'}
+
+cnn_full_settings = {
+    'T_limit': None,
+    'train_val_test_split': [0.7, 0.15, 0.15],
+    'window_length': 30,
+    'stride': 1,
+    'chunk_size': 300,
+    'target_appliances': ['CWE', 'DWE', 'FRE', 'HPE', 'WOE', 'CDE', 'FGE', 'HTE'],
+    'rand_seed': 42,
+    'dataset_name': 'ampds_cnn_full'}
+
 def generate_data(T_limit, train_val_test_split, window_length, stride, chunk_size, target_appliances, rand_seed, dataset_name):
 
     # Directories
