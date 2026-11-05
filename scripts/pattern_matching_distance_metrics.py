@@ -6,124 +6,123 @@ import matplotlib.pyplot as plt
 from fastdtw import fastdtw
 import pickle
 
-# Directories
-notebooks_dir = os.path.dirname(__file__)
-base_dir = os.path.join(notebooks_dir, '..')
-processed_data_dir = os.path.join(base_dir, 'processed_data')
-results_dir = os.path.join(base_dir, 'results')
-os.makedirs(results_dir, exist_ok=True)
-
 # Settings
-dataset_name = 'ampds_dataset_full'
+mini_dataset_name = 'ampds_pattern-matching_mini'
 
-# Load Data
-processed_data_filepath = os.path.join(processed_data_dir, dataset_name + '.npz')
-data = np.load(processed_data_filepath)
+def compute_distance_metrics(dataset_name):
 
-window_length, stride = data['window_length'], data['stride']
-agg_labels = data['agg_labels']
-apps_labels = data['apps_labels']
-electrical_quantities = data['electrical_quantities']
-appliance_names = data['appliance_names']
+    # Directories
+    notebooks_dir = os.path.dirname(__file__)
+    base_dir = os.path.join(notebooks_dir, '..')
+    processed_data_dir = os.path.join(base_dir, 'processed_data')
+    results_dir = os.path.join(base_dir, 'results')
+    os.makedirs(results_dir, exist_ok=True)
 
-agg_norm = data['agg_norm']
+    # Load Data
+    processed_data_filepath = os.path.join(processed_data_dir, dataset_name + '.npz')
+    data = np.load(processed_data_filepath)
 
-train_indices = data['train_indices']
-val_indices = data['val_indices']
-test_indices = data['test_indices']
-all_indices = np.concatenate((train_indices, val_indices, test_indices))
-query_indices = np.concatenate((val_indices, test_indices))
+    window_length = data['window_length']
+    agg_norm = data['agg_norm']
 
-# Feature Vectors
-def compute_feature_vector_2D(x_win, feature_selection='all'):
-    
-    funcs = {
-        'mean': lambda x: np.mean(x, axis=0),
-        'min': lambda x: np.min(x, axis=0),
-        'max': lambda x: np.max(x, axis=0),
-        'std': lambda x: np.std(x, axis=0),
-        'rms': lambda x: np.mean(x**2, axis=0),
-        'energy': lambda x: np.sum(x**2, axis=0)}
+    train_indices = data['train_indices']
+    val_indices = data['val_indices']
+    test_indices = data['test_indices']
+    all_indices = np.concatenate((train_indices, val_indices, test_indices))
+    query_indices = np.concatenate((val_indices, test_indices))
 
-    if feature_selection == 'all': feature_selection = list(funcs)
-    return np.column_stack([funcs[name](x_win) for name in feature_selection])
+    # Feature Vectors
+    def compute_feature_vector_2D(x_win, feature_selection='all'):
+        
+        funcs = {
+            'mean': lambda x: np.mean(x, axis=0),
+            'min': lambda x: np.min(x, axis=0),
+            'max': lambda x: np.max(x, axis=0),
+            'std': lambda x: np.std(x, axis=0),
+            'rms': lambda x: np.mean(x**2, axis=0),
+            'energy': lambda x: np.sum(x**2, axis=0)}
 
-def feature_distance(vector1, vector2): return np.linalg.norm(vector1 - vector2, ord='fro')
+        if feature_selection == 'all': feature_selection = list(funcs)
+        return np.column_stack([funcs[name](x_win) for name in feature_selection])
 
-feature_lookup = {
-    int(i): compute_feature_vector_2D(agg_norm[i : i + window_length, 2:])
-    for i in all_indices}
+    def feature_distance(vector1, vector2): return np.linalg.norm(vector1 - vector2, ord='fro')
 
-feature_lookup_filepath = os.path.join(results_dir, dataset_name + '_feature_lookup.pkl')
-with open(feature_lookup_filepath, 'wb') as f: pickle.dump(feature_lookup, f)
+    feature_lookup = {
+        int(i): compute_feature_vector_2D(agg_norm[i : i + window_length, 2:])
+        for i in all_indices}
 
-# Feature Distances
-feature_distance_lookup = {}
+    feature_lookup_filepath = os.path.join(results_dir, dataset_name + '_feature_lookup.pkl')
+    with open(feature_lookup_filepath, 'wb') as f: pickle.dump(feature_lookup, f)
 
-for query_idx in tqdm(query_indices, desc='Computing Feature Distances'):
-    query_features = feature_lookup[query_idx]
+    # Feature Distances
+    feature_distance_lookup = {}
 
-    for template_idx, template_features in feature_lookup.items():
-        feature_distance_lookup[(int(template_idx), int(query_idx))] = float(
-            feature_distance(template_features, query_features))
+    for query_idx in tqdm(query_indices, desc='Computing Feature Distances'):
+        query_features = feature_lookup[query_idx]
 
-feature_distance_lookup_filepath = os.path.join(results_dir, dataset_name + '_feature_distance_lookup.pkl')
-with open(feature_distance_lookup_filepath, 'wb') as f: pickle.dump(feature_distance_lookup, f)
+        for template_idx, template_features in feature_lookup.items():
+            feature_distance_lookup[(int(template_idx), int(query_idx))] = float(
+                feature_distance(template_features, query_features))
 
-# Pearson Correlation
-def compute_correlation(frame1, frame2):
-    
-    correlations = [
-        np.corrcoef(frame1[:, i], frame2[:, i])[0, 1]
-        for i in range(frame1.shape[1])]
+    feature_distance_lookup_filepath = os.path.join(results_dir, dataset_name + '_feature_distance_lookup.pkl')
+    with open(feature_distance_lookup_filepath, 'wb') as f: pickle.dump(feature_distance_lookup, f)
 
-    return np.mean(np.abs(correlations))
+    # Pearson Correlation
+    def compute_correlation(frame1, frame2):
+        
+        correlations = [
+            np.corrcoef(frame1[:, i], frame2[:, i])[0, 1]
+            for i in range(frame1.shape[1])]
 
-pearson_correlation_lookup = {}
+        return np.mean(np.abs(correlations))
 
-for query_idx in tqdm(query_indices, desc='Computing Pearson Correlation'):
-    query_frame = agg_norm[query_idx : query_idx + window_length, 2:]
+    pearson_correlation_lookup = {}
 
-    for template_idx in train_indices:
-        template_frame = agg_norm[template_idx : template_idx + window_length, 2:]
-        pearson_correlation_lookup[(int(template_idx), int(query_idx))] = float(
-            compute_correlation(template_frame, query_frame))
+    for query_idx in tqdm(query_indices, desc='Computing Pearson Correlation'):
+        query_frame = agg_norm[query_idx : query_idx + window_length, 2:]
 
-pearson_correlation_lookup_filepath = os.path.join(results_dir, dataset_name + '_pearson_correlation_lookup.pkl')
-with open(feature_distance_lookup_filepath, 'wb') as f: pickle.dump(pearson_correlation_lookup, f)
+        for template_idx in train_indices:
+            template_frame = agg_norm[template_idx : template_idx + window_length, 2:]
+            pearson_correlation_lookup[(int(template_idx), int(query_idx))] = float(
+                compute_correlation(template_frame, query_frame))
 
-# Dynamic Time Warping
-def compute_dtw(frame1, frame2):
-    distance, path = fastdtw(
-        frame1,
-        frame2,
-        dist=lambda x, y: np.linalg.norm(x - y))
-    return distance, path
+    pearson_correlation_lookup_filepath = os.path.join(results_dir, dataset_name + '_pearson_correlation_lookup.pkl')
+    with open(feature_distance_lookup_filepath, 'wb') as f: pickle.dump(pearson_correlation_lookup, f)
 
-# Compare every validation/test frame with every training template
-dtw_distance_lookup = {}
+    # Dynamic Time Warping
+    def compute_dtw(frame1, frame2):
+        distance, path = fastdtw(
+            frame1,
+            frame2,
+            dist=lambda x, y: np.linalg.norm(x - y))
+        return distance, path
 
-for query_idx in tqdm(query_indices, desc='Computing DTW Distance'):
-    query_frame = agg_norm[query_idx : query_idx + window_length, 2:]
+    # Compare every validation/test frame with every training template
+    dtw_distance_lookup = {}
 
-    for template_idx in train_indices:
-        template_frame = agg_norm[template_idx : template_idx + window_length, 2:]
-        distance, _ = compute_dtw(template_frame, query_frame)
-        dtw_distance_lookup[(int(template_idx), int(query_idx))] = float(distance)
+    for query_idx in tqdm(query_indices, desc='Computing DTW Distance'):
+        query_frame = agg_norm[query_idx : query_idx + window_length, 2:]
 
-dtw_distance_lookup_filepath = os.path.join(results_dir, dataset_name + '_dtw_distance_lookup.pkl')
-with open(dtw_distance_lookup_filepath, 'wb') as f: pickle.dump(dtw_distance_lookup, f)
+        for template_idx in train_indices:
+            template_frame = agg_norm[template_idx : template_idx + window_length, 2:]
+            distance, _ = compute_dtw(template_frame, query_frame)
+            dtw_distance_lookup[(int(template_idx), int(query_idx))] = float(distance)
 
-# Consolidate Distance Metrics
-combined_lookup = {}
+    dtw_distance_lookup_filepath = os.path.join(results_dir, dataset_name + '_dtw_distance_lookup.pkl')
+    with open(dtw_distance_lookup_filepath, 'wb') as f: pickle.dump(dtw_distance_lookup, f)
 
-for key in feature_distance_lookup:
-    template_idx, query_idx = key
-    if key in pearson_correlation_lookup and key in dtw_distance_lookup:
-        combined_lookup[key] = {
-            "feature_distance": float(feature_distance_lookup[key]),
-            "pearson_correlation": float(pearson_correlation_lookup[key]),
-            "dtw_distance": float(dtw_distance_lookup[key])}
+    # Consolidate Distance Metrics
+    combined_lookup = {}
 
-combined_lookup_filepath = os.path.join(results_dir, dataset_name + '_combined_distance_metric_lookup.pkl')
-with open(combined_lookup_filepath, 'wb') as f: pickle.dump(combined_lookup, f)
+    for key in feature_distance_lookup:
+        template_idx, query_idx = key
+        if key in pearson_correlation_lookup and key in dtw_distance_lookup:
+            combined_lookup[key] = {
+                "feature_distance": float(feature_distance_lookup[key]),
+                "pearson_correlation": float(pearson_correlation_lookup[key]),
+                "dtw_distance": float(dtw_distance_lookup[key])}
+
+    combined_lookup_filepath = os.path.join(results_dir, dataset_name + '_combined_distance_metric_lookup.pkl')
+    with open(combined_lookup_filepath, 'wb') as f: pickle.dump(combined_lookup, f)
+
+compute_distance_metrics(mini_dataset_name)
