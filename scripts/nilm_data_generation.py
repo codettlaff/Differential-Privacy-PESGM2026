@@ -86,7 +86,7 @@ def generate_data(T_limit, train_val_test_split, window_length, stride, chunk_si
     apps_data = apps_data[:, column_indices]
     apps_labels = apps_labels[column_indices]
 
-    def get_appliance_metrics(apps, on_thresholds):
+    def get_appliance_metrics(apps):
         return {
             "apps_min": np.min(apps, axis=0),
             "apps_max": np.max(apps, axis=0),
@@ -94,7 +94,7 @@ def generate_data(T_limit, train_val_test_split, window_length, stride, chunk_si
             "apps_median": np.median(apps, axis=0),
             "apps_std": np.std(apps, axis=0)}
     
-    appliance_metrics = get_appliance_metrics(apps_data[:, 2:], appliance_on_thresholds)
+    appliance_metrics = get_appliance_metrics(apps_data[:, 2:])
 
     # Normalize Data
     def normalize_data(x):
