@@ -4,13 +4,15 @@ from scipy.io import loadmat
 
 # Data Generation Settings
 
+target_appliances = ['FRE', 'HPE']
+
 pattern_matching_mini_settings = {
     'T_limit': 3000,
     'train_val_test_split': [0.7, 0.15, 0.15],
     'window_length': 30,
     'stride': 30,
     'chunk_size': 300,
-    'target_appliances': ['CWE', 'DWE', 'FRE', 'HPE', 'WOE', 'CDE', 'FGE', 'HTE'],
+    'target_appliances': target_appliances,
     'rand_seed': 42,
     'dataset_name': 'ampds_pattern-matching_mini'}
 
@@ -20,7 +22,7 @@ pattern_matching_full_settings = {
     'window_length': 30,
     'stride': 30,
     'chunk_size': 300,
-    'target_appliances': ['CWE', 'DWE', 'FRE', 'HPE', 'WOE', 'CDE', 'FGE', 'HTE'],
+    'target_appliances': target_appliances,
     'rand_seed': 42,
     'dataset_name': 'ampds_pattern-matching_full'}
 
@@ -30,7 +32,7 @@ cnn_mini_settings = {
     'window_length': 30,
     'stride': 1,
     'chunk_size': 300,
-    'target_appliances': ['CWE', 'DWE', 'FRE', 'HPE', 'WOE', 'CDE', 'FGE', 'HTE'],
+    'target_appliances': target_appliances,
     'rand_seed': 42,
     'dataset_name': 'ampds_cnn_mini'}
 
@@ -40,7 +42,7 @@ cnn_full_settings = {
     'window_length': 30,
     'stride': 1,
     'chunk_size': 300,
-    'target_appliances': ['CWE', 'DWE', 'FRE', 'HPE', 'WOE', 'CDE', 'FGE', 'HTE'],
+    'target_appliances': target_appliances,
     'rand_seed': 42,
     'dataset_name': 'ampds_cnn_full'}
 
@@ -84,50 +86,14 @@ def generate_data(T_limit, train_val_test_split, window_length, stride, chunk_si
     apps_data = apps_data[:, column_indices]
     apps_labels = apps_labels[column_indices]
 
-    # Get Appliance Statistics
-    def determine_on_threshold(apps, upper_percentile=99):
-
-        thresholds = np.zeros(apps.shape[1], dtype=float)
-
-        for i in range(apps.shape[1]):
-            values = apps[:, i]
-
-            # For constant profile, keep threshold as zero.
-            if np.all(values == values[0]): continue
-
-            # Limit the influence of rare high readings when selecting the split.
-            cap = np.percentile(values, upper_percentile)
-            values = np.minimum(values, cap)
-
-            levels, counts = np.unique(values, return_counts=True)
-            weights_left = np.cumsum(counts)[:-1]
-            weights_right = values.size - weights_left
-
-            means_left = np.cumsum(levels * counts)[:-1] / weights_left
-            means_right = (np.sum(levels * counts) - np.cumsum(levels * counts)[:-1]) / weights_right
-
-            between_class_variance = (weights_left * weights_right * (means_left - means_right) ** 2)
-            
-            split = np.argmax(between_class_variance)
-            thresholds[i] = max(0.0, (levels[split] + levels[split + 1]) / 2)
-
-        return thresholds
-
-    def on_percentages(apps, thresholds):
-        is_on = apps > thresholds[np.newaxis, :]
-        return is_on.mean(axis=0) * 100
-
     def get_appliance_metrics(apps, on_thresholds):
         return {
             "apps_min": np.min(apps, axis=0),
             "apps_max": np.max(apps, axis=0),
             "apps_mean": np.mean(apps, axis=0),
             "apps_median": np.median(apps, axis=0),
-            "apps_std": np.std(apps, axis=0),
-            'apps_on_threshold': on_thresholds,
-            'apps_on_percentrage': on_percentages(apps, on_thresholds)}
-
-    appliance_on_thresholds = determine_on_threshold(apps_data[:, 2:]) # Exclude 'id' and 'time' columns.
+            "apps_std": np.std(apps, axis=0)}
+    
     appliance_metrics = get_appliance_metrics(apps_data[:, 2:], appliance_on_thresholds)
 
     # Normalize Data
