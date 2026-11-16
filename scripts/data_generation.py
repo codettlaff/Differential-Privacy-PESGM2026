@@ -12,7 +12,7 @@ settings1 = {
     'T_limit': 1440 * 7, # One Week
     'train_val_test_split': [0.7, 0.15, 0.15],
     'window_length': 30,
-    'stride': 1,
+    'stride': 30,
     'chunk_size': 1440, # One Day
     'time_resolution': 60,
     'time_units': 'seconds',
@@ -24,7 +24,7 @@ settings2 = {
     'T_limit': None, # Full Two-Years Dataset
     'train_val_test_split': [0.7, 0.15, 0.15],
     'window_length': 30,
-    'stride': 1,
+    'stride': 30,
     'chunk_size': 1440, # One Day
     'time_resolution': 60,
     'time_units': 'seconds',
@@ -36,7 +36,7 @@ settings3 = {
     'T_limit': 1440 * 7, # One Week
     'train_val_test_split': [0.7, 0.15, 0.15],
     'window_length': 30,
-    'stride': 30,
+    'stride': 1,
     'chunk_size': 1440, # One Day
     'time_resolution': 60,
     'time_units': 'seconds',
@@ -48,7 +48,7 @@ settings4 = {
     'T_limit': None, # Full Two-Years Dataset
     'train_val_test_split': [0.7, 0.15, 0.15],
     'window_length': 30,
-    'stride': 30,
+    'stride': 1,
     'chunk_size': 1440, # One Day
     'time_resolution': 60,
     'time_units': 'seconds',
