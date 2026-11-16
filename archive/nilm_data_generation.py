@@ -4,6 +4,8 @@ from scipy.io import loadmat
 
 # Data Generation Settings
 
+# Need to add apps_to_remove and set it to 'apps_to_remove'
+
 target_appliances = ['FRE', 'HPE']
 
 pattern_matching_mini_settings = {
@@ -76,15 +78,21 @@ def generate_data(T_limit, train_val_test_split, window_length, stride, chunk_si
     T = agg_data.shape[0]
     T = min(T, T_limit) if T_limit is not None else T
     agg_data, apps_data = agg_data[:T_limit], apps_data[:T_limit]
-    apps_data = apps_data[:,:,0] # For appliances, keep only real power P
+    apps_data = apps_data[:, :, 0]  # For appliances, keep only real power P
+    apps_labels = np.asarray(apps_labels).flatten()
 
-    # Select Target Appliances Only
-    appliance_names = target_appliances if target_appliances is not None else appliance_names
-    appliance_indices = [appliance_names.index(name) for name in appliance_names]
-    column_indices = [0, 1] + [i + 2 for i in appliance_indices]
+    # Remove appliances (e.g. rental suite) and subtract them from aggregate P
+    remove_cols = [appliance_names.index(n) + 2 for n in apps_to_remove]
+    agg_data[:, 2] -= apps_data[:, remove_cols].sum(axis=1)
+    keep_cols = [c for c in range(apps_data.shape[1]) if c not in remove_cols]
+    apps_data, apps_labels = apps_data[:, keep_cols], apps_labels[keep_cols]
+    appliance_names = [n for n in appliance_names if n not in apps_to_remove]
 
-    apps_data = apps_data[:, column_indices]
-    apps_labels = apps_labels[column_indices]
+    # Select Target Appliances Only (look up indices BEFORE overwriting names)
+    if target_appliances is not None:
+        column_indices = [0, 1] + [appliance_names.index(n) + 2 for n in target_appliances]
+        apps_data, apps_labels = apps_data[:, column_indices], apps_labels[column_indices]
+        appliance_names = list(target_appliances)
 
     def get_appliance_metrics(apps):
         return {
@@ -92,9 +100,8 @@ def generate_data(T_limit, train_val_test_split, window_length, stride, chunk_si
             "apps_max": np.max(apps, axis=0),
             "apps_mean": np.mean(apps, axis=0),
             "apps_median": np.median(apps, axis=0),
-            "apps_std": np.std(apps, axis=0)}
-    
-    appliance_metrics = get_appliance_metrics(apps_data[:, 2:])
+            "apps_std": np.std(apps, axis=0),
+            "apps_energy": np.sum(apps, axis=0)}
 
     # Normalize Data
     def normalize_data(x):
