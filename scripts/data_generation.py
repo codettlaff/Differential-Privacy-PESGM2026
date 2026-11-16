@@ -183,17 +183,17 @@ def generate_dataset(dataset_name, T_limit, train_val_test_split, window_length,
         return x_norm, x_min.ravel(), x_max.ravel()
 
     # Normalize using min/max from training data only, then reattach time/id columns
+    # Normalize each feature separately using min/max from training data only, then reattach time/id columns
     train_indices = idx_dict['train_indices']
 
-    agg_p_norm, agg_min, agg_max = normalize_data(agg[:, 2:], train_indices, window_length)
-    apps_p_norm, apps_min_train, apps_max_train = normalize_data(apps, train_indices, window_length)
+    agg_norm, agg_min_train, agg_max_train = normalize_data(agg, train_indices, window_length)
+    apps_norm, apps_min_train, apps_max_train = normalize_data(apps, train_indices, window_length)
 
     scaling_factors = {
-        'apps_min': apps_min_train,
+        'agg_min': agg_min_train,    # shape (n_agg_features,)
+        'agg_max': agg_max_train,
+        'apps_min': apps_min_train,  # shape (n_apps,)
         'apps_max': apps_max_train}
-
-    agg_norm = np.column_stack((agg, agg_p_norm))
-    apps_norm = np.column_stack((apps, apps_p_norm))
 
     np.savez_compressed(
         processed_data_filepath,
